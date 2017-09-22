@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ExcelDB</string>
+    <string name="regis">REGISTRAR CARRETERA</string>
+    <string name="consul">CONSULTAR CARRETERA</string>
+    <string name="consul_spinner">CONSULTAR LISTA USUARIO USANDO SPINNER</string>
+    <string name="consul_listview">CONSULTAR LISTA USUARIO USANDO LISTVIEW</string>
+    <string name="id">ID</string>
+    <string name="nombre">Nombre</string>
+    <string name="codigo">Codigo</string>
+    <string name="territorial">Territorial</string>
+    <string name="admon">Conseción, MTTO Integral, A.M.V</string>
+    <string name="levantado">Levantado por: </string>
+    <string name="buscar">BUSCAR</string>
+    <string name="actualizar">ACTUALIZAR</string>
+    <string name="eliminar">ELIMINAR</string>
+</resources>

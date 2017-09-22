@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="titulo">35dp</dimen>
+    <dimen name="marginTop">30dp</dimen>
+    <dimen name="margenBoton">20dp</dimen>
+    <dimen name="boton">160dp</dimen>
+</resources>

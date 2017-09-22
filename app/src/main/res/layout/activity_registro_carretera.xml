@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.alejo_zr.exceldb.RegistroCarreteraActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/regis"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/campoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/id"/>
+
+    <EditText
+        android:id="@+id/campoNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"/>
+
+    <EditText
+        android:id="@+id/campoCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/codigo"/>
+    <EditText
+        android:id="@+id/campoTerritorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/territorial"/>
+    <EditText
+        android:id="@+id/campoAdmon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/admon"/>
+    <EditText
+        android:id="@+id/campoLevantado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/levantado"/>
+
+    <Button
+        android:id="@+id/btnRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Usuario"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick"/>
+
+</LinearLayout>
