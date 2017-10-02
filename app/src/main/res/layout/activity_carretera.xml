@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alejo_zr.exceldb.Carretera.CarreteraActivity">
+
+    <ImageButton
+    android:id="@+id/btnEditarCarretera"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_edit_black_24dp"
+    android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROBNADO 123"/>
+
+    <LinearLayout
+        android:id="@+id/llNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEditarCarretera"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvNombreCarretera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/vacio"
+            android:layout_marginLeft="@dimen/marginLeftTV"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTerritorial"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopTV"
+        android:layout_below="@id/llNombre">
+
+
+        <TextView
+            android:id="@+id/tvCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/codigo"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvCodigoCarretera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/vacio"/>
+
+        <TextView
+            android:id="@+id/tvTerritorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/territorial"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvTerritorialCarretera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="@string/vacio"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAdmon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTopTV"
+        android:layout_below="@id/llTerritorial">
+
+        <TextView
+            android:id="@+id/tvAdmon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/adminstracion"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvAdmonCarretera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginLeftTV"
+            android:hint="@string/vacio"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLevantado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTopTV"
+        android:layout_below="@id/llAdmon">
+
+        <TextView
+            android:id="@+id/tvLevantado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llAdmon"
+            android:text="@string/levantado"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvLevantadoCarretera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llAdmon"
+            android:layout_marginLeft="@dimen/marginLeftTV"
+            android:hint="@string/vacio"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegistroSegmento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llLevantado"
+        android:text="@string/regisSeg"
+        android:layout_marginTop="@dimen/marginTopBtn"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnConsultarSegmento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnRegistroSegmento"
+        android:text="@string/consulSeg"
+        android:layout_marginTop="@dimen/marginTopBtn"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tvIdCarretera"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/id"
+        android:layout_below="@id/btnConsultarSegmento"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tvNomCarretera"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:layout_below="@id/tvIdCarretera"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+
+
+</RelativeLayout>
