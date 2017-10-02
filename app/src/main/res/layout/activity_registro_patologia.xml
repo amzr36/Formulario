@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alejo_zr.exceldb.Patologia.RegistroPatologiaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/campoCarrilPato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/carril"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDanio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/patologia"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/spinnerPatoFlex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></Spinner>
+
+        <EditText
+            android:id="@+id/campoDanioPato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/patologia"/>
+
+        <TextView
+            android:id="@+id/tvDimenDanio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/danio"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/campoLargoDanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/largo"/>
+            <EditText
+                android:id="@+id/campoAnchoDanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/anchoD"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reparacion"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/campoLargoRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/largo"/>
+            <EditText
+                android:id="@+id/campoAnchoRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/anchoD"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/campoAclaraciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/aclaraciones"/>
+
+        <ImageButton
+            android:id="@+id/btnDanio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/photo"
+            android:onClick="onClick"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/img_base"
+            android:id="@+id/imagemId"
+            android:layout_marginTop="@dimen/marginTopTV"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/btnRegistroPatologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:text="@string/registroPato"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@+id/tv_nombre_carretera_patologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"/>
+
+        <TextView
+            android:id="@+id/tv_id_segmento_patologia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/segmento"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alejo_zr.exceldb">
 
+
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -19,9 +21,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroCarreteraActivity" />
-        <activity android:name=".ConsultarCarreteraActivity"
-            android:label="@string/consul"></activity>
+        <activity
+            android:name=".Carretera.RegistroCarreteraActivity"
+            android:label="@string/regis"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Carretera.ConsultarCarreteraActivity"
+            android:label="@string/consul"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Segmento.RegistroSegmentoActivity"
+            android:label="@string/regisSeg"
+            android:parentActivityName=".Carretera.ConsultarCarreteraActivity" />
+        <activity
+            android:name=".Patologia.DanioFlexActivity"
+            android:label="@string/regisPatologias" />
+        <activity
+            android:name=".Carretera.ConsulCarreteraActivity"
+            android:label="@string/consul" />
+        <activity
+            android:name=".Carretera.CarreteraActivity"
+            android:label="@string/datosCarretera" />
+        <activity
+            android:name=".Segmento.ConsultarSegmentoActivity"
+            android:label="@string/consulSeg" />
+        <activity
+            android:name=".Segmento.SegmentoActivity"
+            android:label="@string/datosSegmento" />
+        <activity android:name=".Patologia.RegistroPatologiaActivity" />
+        <activity android:name=".ConsultaPatologiaActivity" />
+        <activity android:name=".PatologiaActivity"></activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>

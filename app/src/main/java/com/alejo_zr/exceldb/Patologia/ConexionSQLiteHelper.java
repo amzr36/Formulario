@@ -1,6 +1,5 @@
-package com.alejo_zr.exceldb;
+package com.alejo_zr.exceldb.Patologia;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -30,15 +29,15 @@ public class ConexionSQLiteHelper extends SQLiteOpenHelper{
         onCreate(db);
 
     }
-    public void insertData(){
+    /*public void insertData(){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         // contentValues.put("id integer primary key","1");
         contentValues.put("id", "id");
-        contentValues.put("road_name", "probando");
-        contentValues.put("code_number", "123456");
+        contentValues.put("nombreCarretera", "probando");
+        contentValues.put("codCarretera","123Probando");
         db.insert(Utilidades.TABLA_CARRETERA,null,contentValues);
-    }
+    }*/
 
     public Cursor getroad() {
         SQLiteDatabase db = this.getReadableDatabase();

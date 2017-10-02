@@ -1,23 +1,32 @@
 package com.alejo_zr.exceldb.entidades;
 
+import java.io.Serializable;
+
 /**
  * Created by Alejo on 21/09/2017.
  */
 
-public class Carretera {
+public class Carretera implements Serializable {
 
     private Integer id;
     private String levantado;
-    private String nombre;
-    private String codigo;
+    private String nombreCarretera;
+    private String codCarretera;
     private String territorial;
+    private String admon;
 
-    public Carretera() {
+    public Carretera(Integer id, String levantado, String nombreCarretera, String codCarretera, String territorial,
+                     String admon) {
         this.id = id;
         this.levantado = levantado;
-        this.nombre = nombre;
-        this.codigo = codigo;
+        this.nombreCarretera = nombreCarretera;
+        this.codCarretera = codCarretera;
         this.territorial = territorial;
+        this.admon = admon;
+    }
+
+    public Carretera() {
+
     }
 
     public Integer getId() {
@@ -36,20 +45,20 @@ public class Carretera {
         this.levantado = levantado;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCarretera() {
+        return nombreCarretera;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCarretera(String nombreCarretera) {
+        this.nombreCarretera = nombreCarretera;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getCodCarretera() {
+        return codCarretera;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setCodCarretera(String codCarretera) {
+        this.codCarretera = codCarretera;
     }
 
     public String getTerritorial() {
@@ -58,5 +67,13 @@ public class Carretera {
 
     public void setTerritorial(String territorial) {
         this.territorial = territorial;
+    }
+
+    public String getAdmon() {
+        return admon;
+    }
+
+    public void setAdmon(String admon) {
+        this.admon = admon;
     }
 }

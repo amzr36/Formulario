@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alejo_zr.exceldb.ConsultarCarreteraActivity">
+    tools:context="com.alejo_zr.exceldb.Carretera.ConsultarCarreteraActivity">
 
     <ListView
-        android:id="@+id/listViewPersonas"
+        android:id="@+id/listViewCarretera"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
