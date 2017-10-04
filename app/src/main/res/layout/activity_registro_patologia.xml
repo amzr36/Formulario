@@ -16,13 +16,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_campoCarrilPato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/campoCarrilPato"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/carril"/>
 
+
+
+            </android.support.design.widget.TextInputLayout>
         </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/tvDanio"
@@ -57,18 +67,38 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/campoLargoDanio"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_campoLargoDanio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/largo"/>
-            <EditText
-                android:id="@+id/campoAnchoDanio"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/campoLargoDanio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/largo"/>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_campoAnchoDanio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="@string/anchoD"/>
+                android:layout_weight="1">
+
+
+                <EditText
+                    android:id="@+id/campoAnchoDanio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/anchoD"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
 
         </LinearLayout>
 
@@ -105,6 +135,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/aclaraciones"/>
+        <TextView
+            android:id="@+id/tv_foto_danio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="direccion foto"/>
 
         <ImageButton
             android:id="@+id/btnDanio"
@@ -141,6 +176,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/segmento"/>
+
+
+
+
 
 
 

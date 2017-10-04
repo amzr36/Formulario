@@ -55,28 +55,27 @@ public class Utilidades {
     public static final String CAMPO_LARGO_REPARACION="largo_reparacion";
     public static final String CAMPO_ANCHO_REPARACION="ancho_reparacion";
     public static final String CAMPO_ACLARACIONES="aclaraciones";
+    public static final String CAMPO_FOTO_DANIO="foto_daño";
 
 
     // Sentencia SQL para la creación de una tabla
     public static final  String CREAR_TABLA_PATOLOGIA= "CREATE TABLE "+TABLA_PATOLOGIA+
             " ("+CAMPO_ID_PATOLOGIA+" INTEGER PRIMARY KEY AUTOINCREMENT, "+CAMPO_NOMBRE_CARRETERA_PATOLOGIA+" TEXT,"+CAMPO_ID_SEGMENTO_PATOLOGIA+" INTEGER,"
             +CAMPO_DANIO_PATOLOGIA+" TEXT ,"+CAMPO_CARRIL_PATOLOGIA+" TEXT ,"+CAMPO_LARGO_PATOLOGIA+" TEXT,"+CAMPO_ANCHO_PATOLOGIA+" TEXT,"
-            +CAMPO_LARGO_REPARACION+" TEXT,"+CAMPO_ANCHO_REPARACION+" TEXT,"+CAMPO_ACLARACIONES+" TEXT)";
+            +CAMPO_LARGO_REPARACION+" TEXT,"+CAMPO_ANCHO_REPARACION+" TEXT,"+CAMPO_ACLARACIONES+" TEXT,"+CAMPO_FOTO_DANIO+" TEXT)";
 
 
-    /*
-
-    public  static final String TABLA_CARRETERA="carretera";
-    public static final String CAMPO_ID="id";
-    public static final String CAMPO_NOMBRE="nombre ";
-    public static final String CAMPO_CODIGO="codigo";
-    public static final String CAMPO_TERRITO="territorial";
-    public static final String CAMPO_LEVANTADO="levantado";
+    public static final String TABLA_FOTO="fotos";
+    public static final String CAMPO_ID_FOTO="id_foto";
+    public static final String CAMPO_NOMBRE_CARRETERA_FOTO="nombreCarretera_foto";
+    public static final String CAMPO_ID_SEGMENTO_FOTO="segmento_foto";
+    public static final String CAMPO_ID_PATOLOGIA_FOTO="patologia_foto";
 
 
-    public static final  String CREAR_TABLA_CARRETERA = "CREATE TABLE "+TABLA_CARRETERA+" ("+CAMPO_ID+" INTEGER, "
-            +CAMPO_NOMBRE+" TEXT, "+CAMPO_CODIGO+" TEXT,"+CAMPO_TERRITO+" TEXT,"+CAMPO_LEVANTADO+" TEXT )";
 
-            */
+    // Sentencia SQL para la creación de una tabla
+    public static final  String CREAR_TABLA_FOTO = "CREATE TABLE "+TABLA_FOTO+
+            " ("+CAMPO_ID_FOTO+" INTEGER PRIMARY KEY AUTOINCREMENT, "+CAMPO_NOMBRE_CARRETERA_FOTO+" TEXT ,"+CAMPO_ID_SEGMENTO_FOTO+" TEXT,"
+            +CAMPO_ID_PATOLOGIA_FOTO+" TEXT)";
 
 }

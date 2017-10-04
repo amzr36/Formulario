@@ -48,7 +48,7 @@ public class RegistroSegmentoActivity extends AppCompatActivity {
         tvNombre_Carretera_Segmento.setText(dato_nom);
 
         //(Vista donde se muestra, como se mostraran los datos, los datos que se van a ver)
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tipoPAV);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, tipoPAV);
         spinnerTipoPav.setAdapter(adaptador);
 
         spinnerTipoPav.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {

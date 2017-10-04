@@ -52,7 +52,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
     String path;
 
     Spinner spinnerPatoFlex;
-    TextView tv_nombre_carretera_patologia,tv_id_segmento_patologia;
+    TextView tv_nombre_carretera_patologia,tv_id_segmento_patologia,tv_foto_danio;
     EditText campoCarrilPato, campoDanioPato, campoLargoDanio, campoAnchoDanio, campoLargoRepa, campoAnchoRepa, campoAclaracion;
     String[] tipoDanio = {"Seleccione el tipo de Daño", "Fisuras longitudinales y transversales", "Fisura longitudinal en junta de construcción",
             "Fisuras por reflexión de juntas o grietas en placas de concreto", "Fisuras en medialuna", "Fisuras de borde", "Fisuras en bloque", "Piel de cocotrilo",
@@ -85,6 +85,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
         campoAclaracion = (EditText) findViewById(R.id.campoAclaraciones);
         tv_nombre_carretera_patologia = (TextView) findViewById(R.id.tv_nombre_carretera_patologia);
         tv_id_segmento_patologia = (TextView) findViewById(R.id.tv_id_segmento_patologia);
+        tv_foto_danio = (TextView) findViewById(R.id.tv_foto_danio);
 
         Bundle bundle = getIntent().getExtras();
         String dato_nom_carretera = bundle.getString("nom_carretera_segmento");
@@ -92,8 +93,9 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
         tv_nombre_carretera_patologia.setText(dato_nom_carretera);
         tv_id_segmento_patologia.setText(id_segmento);
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, tipoDanio);
-        spinnerPatoFlex.setAdapter(adaptador);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_dropdown_item_1line, tipoDanio);
+        spinnerPatoFlex.setAdapter(arrayAdapter);
 
 
         spinnerPatoFlex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -200,11 +202,12 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
 
         switch (view.getId()){
 
-            case R.id.btnRegistrarPatologia:
+            case R.id.btnRegistroPatologia:
+                Toast.makeText(getApplicationContext(),R.string.regisPatologias,Toast.LENGTH_SHORT).show();
                 registrarSegmento();
                 break;
             case R.id.btnDanio:
-                cargarImagen();
+                tomarFotografia();
                 break;
         }
 
@@ -220,10 +223,11 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
         String insert="INSERT INTO "+ Utilidades.TABLA_PATOLOGIA
                 +" ( " +Utilidades.CAMPO_NOMBRE_CARRETERA_PATOLOGIA+","+Utilidades.CAMPO_ID_SEGMENTO_PATOLOGIA+","+Utilidades.CAMPO_CARRIL_PATOLOGIA+","+Utilidades.CAMPO_DANIO_PATOLOGIA+
                 ","+Utilidades.CAMPO_LARGO_PATOLOGIA+","+Utilidades.CAMPO_ANCHO_PATOLOGIA+ ","+Utilidades.CAMPO_LARGO_REPARACION+","+Utilidades.CAMPO_ANCHO_REPARACION+","
-                +Utilidades.CAMPO_ACLARACIONES+")" +
+                +Utilidades.CAMPO_ACLARACIONES+","+Utilidades.CAMPO_FOTO_DANIO+")" +
                 " VALUES ('"+tv_nombre_carretera_patologia.getText().toString()+"' , '"+tv_id_segmento_patologia.getText().toString()+"' , '"+campoCarrilPato.getText().toString()+
                 "' , '"+campoDanioPato.getText().toString()+"' , '"+campoLargoDanio.getText().toString()+"' , '"+campoAnchoDanio.getText().toString()+"' , '"+
-                campoLargoRepa.getText().toString()+"' , '"+campoAnchoRepa.getText().toString()+"' , '"+campoAclaracion.getText().toString()+"')";
+                campoLargoRepa.getText().toString()+"' , '"+campoAnchoRepa.getText().toString()+"' , '"+campoAclaracion.getText().toString()+"' , '"+
+                tv_foto_danio.getText().toString()+"')";
 
         db.execSQL(insert);
         Toast.makeText(getApplicationContext(),R.string.regisPatologias,Toast.LENGTH_SHORT).show();
@@ -266,12 +270,15 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
         }
 
         if(isCreada==true){
-            nombreImagen=(System.currentTimeMillis()/1000)+".jpg";
+            nombreImagen=(tv_nombre_carretera_patologia.getText().toString()+"-"+tv_id_segmento_patologia.getText().toString()+".png");
         }
 
 
         path=Environment.getExternalStorageDirectory()+
                 File.separator+RUTA_IMAGEN+File.separator+nombreImagen;
+
+        tv_foto_danio.setText(path);
+
 
         File imagen=new File(path);
 

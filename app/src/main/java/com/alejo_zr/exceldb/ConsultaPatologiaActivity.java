@@ -78,6 +78,7 @@ public class ConsultaPatologiaActivity extends AppCompatActivity {
             patoFlex.setLargoRepa(cursor.getString(7));
             patoFlex.setAnchoRepa(cursor.getString(8));
             patoFlex.setAclaraciones(cursor.getString(9));
+            patoFlex.setFoto(cursor.getString(10));
 
             listaPatologias.add(patoFlex);
 

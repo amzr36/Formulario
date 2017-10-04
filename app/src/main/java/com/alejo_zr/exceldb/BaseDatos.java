@@ -31,6 +31,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL(Utilidades.CREAR_TABLA_CARRETERA);
         db.execSQL(Utilidades.CREAR_TABLA_SEGMENTO);
         db.execSQL(Utilidades.CREAR_TABLA_PATOLOGIA);
+        db.execSQL(Utilidades.CREAR_TABLA_FOTO);
     }
 
     @Override
@@ -38,6 +39,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + Utilidades.TABLA_CARRETERA);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_SEGMENTO);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_PATOLOGIA);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_FOTO);
         onCreate(db);
     }
 

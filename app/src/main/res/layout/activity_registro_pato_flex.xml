@@ -28,6 +28,8 @@
         android:textSize="@dimen/subTitulo"
         android:textStyle="bold"/>
 
+
+
     <Spinner
         android:id="@+id/spinnerPatoFlex"
         android:layout_width="match_parent"
