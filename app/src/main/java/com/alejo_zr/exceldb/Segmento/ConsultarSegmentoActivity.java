@@ -60,6 +60,34 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
 
     }
 
+    protected void onRestart() {
+        super.onRestart();
+        baseDatos=new BaseDatos(this);
+
+        listViewSegmentos = (ListView) findViewById(R.id.listViewSegmento);
+
+        consultarListaSegmentos();
+
+        ArrayAdapter adaptador=new ArrayAdapter(this,android.R.layout.simple_list_item_1,listaInformacionSegmentos);
+        listViewSegmentos.setAdapter(adaptador);
+
+        listViewSegmentos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
+
+                Segmento segmento=listaSegmentos.get(posS);
+                Intent intent=new Intent(ConsultarSegmentoActivity.this,SegmentoActivity.class);
+
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("segmento",segmento);
+
+                intent.putExtras(bundle);
+
+                startActivity(intent);
+            }
+        });
+    }
+
     private void consultarListaSegmentos() {
 
         SQLiteDatabase db=baseDatos.getReadableDatabase();
@@ -97,7 +125,7 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
 
 
         for (int i=0; i<listaSegmentos.size();i++){
-            listaInformacionSegmentos.add("Carretera"+listaSegmentos.get(i).getNombre_carretera()+"- Segmento "
+            listaInformacionSegmentos.add("Carretera: "+listaSegmentos.get(i).getNombre_carretera()+"- Segmento: "
                     +listaSegmentos.get(i).getId_segmento());
         }
     }

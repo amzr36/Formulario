@@ -118,9 +118,8 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
         listaInformacion=new ArrayList<String>();
 
         for (int i=0; i<listaCarreteras.size();i++){
-            listaInformacion.add(listaCarreteras.get(i).getId()+" - "
-                    +listaCarreteras.get(i).getNombreCarretera()+" - "+listaCarreteras.get(i).getCodCarretera()+" - "
-                    +listaCarreteras.get(i).getTerritorial()+" - "+listaCarreteras.get(i).getAdmon());
+            listaInformacion.add(listaCarreteras.get(i).getNombreCarretera()+" - "+listaCarreteras.get(i).getCodCarretera()+" - "
+                    +listaCarreteras.get(i).getTerritorial());
         }
 
     }

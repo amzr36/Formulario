@@ -5,14 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/activity_horizontal_margin"
     tools:context="com.alejo_zr.exceldb.Segmento.EditarSegmentoActivity">
 
+    <TextView
+        android:id="@+id/tvTipoPav_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tipoPav"
+        android:textSize="@dimen/subTitulo"
+        android:textStyle="bold"
+        />
     <Spinner
-        android:id="@+id/spinnerTipoPav_Editar"
+        android:id="@+id/spinnerTipoPavEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginTop"
         />
+
+
+    <TextView
+        android:id="@+id/tvTipoPav_Editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo pavimento" />
 
     <TextView
         android:id="@+id/tvNumero_Editar"
@@ -26,20 +41,34 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:id="@+id/campoNCalzadas_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nCalzadas"
+                />
 
-        <EditText
-            android:id="@+id/campoNCalzadas_Editar"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/nCalzadas"
-            />
-        <EditText
-            android:id="@+id/campoNCarriles_Editar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/nCarriles"/>
+            >
+
+            <EditText
+                android:id="@+id/campoNCarriles_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nCarriles"/>
+        </android.support.design.widget.TextInputLayout>
+
+
 
     </LinearLayout>
 
@@ -56,18 +85,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/campoAnchoCarril_Editar"
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/anchoCarril"/>
-        <EditText
-            android:id="@+id/campoAnchoBerma_Editar"
+            >
+            <EditText
+                android:id="@+id/campoAnchoCarril_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anchoCarril"/>
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/anchoBerma"/>
+            >
+            <EditText
+                android:id="@+id/campoAnchoBerma_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anchoBerma"/>
+        </android.support.design.widget.TextInputLayout>
+
 
     </LinearLayout>
 
@@ -85,27 +125,48 @@
         android:layout_height="wrap_content"
         >
 
-        <EditText
-            android:id="@+id/campoPRI_Editar"
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/pri"/>
-        <EditText
-            android:id="@+id/campoPRF_Editar"
+            >
+            <EditText
+                android:id="@+id/campoPRI_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pri"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/prf"/>
+            >
+            <EditText
+                android:id="@+id/campoPRF_Editar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prf"/>
+        </android.support.design.widget.TextInputLayout>
+
+
 
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/campoComentarios_Editar"
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/comentarios"/>
+        android:layout_weight="1"
+        >
+        <EditText
+            android:id="@+id/campoComentarios_Editar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/comentarios"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -135,32 +196,27 @@
         android:id="@+id/tv_id_segmento_editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tvTipoPav_Editar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Tipo pavimento"
-        android:visibility="visible"/>
+
 
     <TextView
         android:id="@+id/tvId_Carretera_Segmento_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/id"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/tvNombre_Carretera_Segmento_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
     <TextView
         android:id="@+id/tvPavInt_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/tipoPav"
-        android:visibility="visible"/>
+        android:visibility="invisible"/>
 
 
 
