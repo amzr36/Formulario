@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.alejo_zr.exceldb.BaseDatos;
 import com.alejo_zr.exceldb.R;
@@ -44,6 +45,38 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
 
+                Carretera carretera=listaCarreteras.get(pos);
+
+                Intent intent=new Intent(ConsultarCarreteraActivity.this,CarreteraActivity.class);
+
+                Bundle bundle=new Bundle();
+                bundle.putSerializable("carretera",carretera);
+
+                intent.putExtras(bundle);
+                startActivity(intent);
+
+
+            }
+        });
+
+    }
+
+    protected void onRestart() {
+        super.onRestart();
+        Toast.makeText(this, "On Start", Toast.LENGTH_SHORT).show();
+        baseDatos=new BaseDatos(this);
+
+        listViewCarreteras= (ListView) findViewById(R.id.listViewCarretera);
+
+        consultarListaPersonas();
+
+        ArrayAdapter adaptador=new ArrayAdapter(this,android.R.layout.simple_list_item_1,listaInformacion);
+        listViewCarreteras.setAdapter(adaptador);
+
+        listViewCarreteras.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
+
                 Carretera user=listaCarreteras.get(pos);
 
                 Intent intent=new Intent(ConsultarCarreteraActivity.this,CarreteraActivity.class);
@@ -57,8 +90,8 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
 
             }
         });
-
     }
+
     private void consultarListaPersonas() {
         SQLiteDatabase db=baseDatos.getReadableDatabase();
 

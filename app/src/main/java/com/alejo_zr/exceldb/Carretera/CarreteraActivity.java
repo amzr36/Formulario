@@ -1,13 +1,13 @@
 package com.alejo_zr.exceldb.Carretera;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.alejo_zr.exceldb.Segmento.ConsultarSegmentoActivity;
 import com.alejo_zr.exceldb.R;
+import com.alejo_zr.exceldb.Segmento.ConsultarSegmentoActivity;
 import com.alejo_zr.exceldb.Segmento.RegistroSegmentoActivity;
 import com.alejo_zr.exceldb.entidades.Carretera;
 
@@ -30,23 +30,25 @@ public class CarreteraActivity extends AppCompatActivity {
         tvLevantadoCarretera = (TextView) findViewById(R.id.tvLevantadoCarretera);
 
         Bundle objetoEnviado=getIntent().getExtras();
-        Carretera user=null;
+        Carretera carretera=null;
 
         if(objetoEnviado!=null){
-            user= (Carretera) objetoEnviado.getSerializable("usuario");
-            tvIdCarretera.setText(user.getId().toString());
-            tvNomCarretera.setText(user.getNombreCarretera().toString());
-            tvNombreCarretera.setText(user.getNombreCarretera().toString());
-            tvCodigoCarretera.setText(user.getCodCarretera().toString());
-            tvTerritorialCarretera.setText(user.getTerritorial().toString());
-            tvAdmonCarretera.setText(user.getAdmon().toString());
-            tvLevantadoCarretera.setText(user.getLevantado().toString());
+            carretera= (Carretera) objetoEnviado.getSerializable("carretera");
+            tvIdCarretera.setText(carretera.getId().toString());
+            tvNomCarretera.setText(carretera.getNombreCarretera().toString());
+            tvNombreCarretera.setText(carretera.getNombreCarretera().toString());
+            tvCodigoCarretera.setText(carretera.getCodCarretera().toString());
+            tvTerritorialCarretera.setText(carretera.getTerritorial().toString());
+            tvAdmonCarretera.setText(carretera.getAdmon().toString());
+            tvLevantadoCarretera.setText(carretera.getLevantado().toString());
 
         }
 
 
 
     }
+
+
 
     public void onClick(View view) {
 
@@ -61,6 +63,17 @@ public class CarreteraActivity extends AppCompatActivity {
                 break;
             case R.id.btnConsultarSegmento:
                 intent = new Intent(CarreteraActivity.this,ConsultarSegmentoActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.btnEditarCarretera:
+                intent = new Intent(CarreteraActivity.this,EditarCarreteraActivity.class);
+                intent.putExtra("id_carretera",tvIdCarretera.getText().toString());
+                intent.putExtra("nom_carretera",tvNombreCarretera.getText().toString());
+                intent.putExtra("cod_carretera",tvCodigoCarretera.getText().toString());
+                intent.putExtra("territo",tvTerritorialCarretera.getText().toString());
+                intent.putExtra("admon",tvAdmonCarretera.getText().toString());
+                intent.putExtra("levantado",tvLevantadoCarretera.getText().toString());
                 startActivity(intent);
                 break;
 

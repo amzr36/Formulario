@@ -21,7 +21,8 @@ public class RegistroSegmentoActivity extends AppCompatActivity {
     Spinner spinnerTipoPav;
     String[] tipoPAV = {"Tipo de pavimento", "Pavimento Flexible", "Pavimento Rigído"};
     EditText campoNCalzadas, campoNCarriles, campoAnchoCarril, campoAnchoBerma, campoPRI, campoPRF, campoComentarios;
-    TextView tvId_Carretera_Segmento,tvNombre_Carretera_Segmento,campotipoPav;
+    TextView tvId_Carretera_Segmento,tvNombre_Carretera_Segmento,campotipoPav,tvPavInt;
+    int tipoPav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class RegistroSegmentoActivity extends AppCompatActivity {
         campotipoPav = (TextView) findViewById(R.id.tvTipoPav);
         tvId_Carretera_Segmento = (TextView) findViewById(R.id.tvId_Carretera_Segmento);
         tvNombre_Carretera_Segmento = (TextView) findViewById(R.id.tvNombre_Carretera_Segmento);
+        tvPavInt = (TextView) findViewById(R.id.tvPavInt);
 
 
         Bundle bundle = getIntent().getExtras();
@@ -57,14 +59,21 @@ public class RegistroSegmentoActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 switch (position){
 
+
+
                     case 0:
                         //No se ha seleccionado el Spinner
+                        tvPavInt.setText("");
                         break;
                     case 1:
+                        tipoPav = 1;
                         campotipoPav.setText("Pavimento Flexible");
+                        tvPavInt.setText("1");
                         break;
                     case 2:
+                        tipoPav = 2;
                         campotipoPav.setText("Pavimento Rigído");
+                        tvPavInt.setText("2");
                         break;
                 }
             }
@@ -89,13 +98,13 @@ public class RegistroSegmentoActivity extends AppCompatActivity {
         SQLiteDatabase db=bd.getWritableDatabase();
 
         String insert="INSERT INTO "+ Utilidades.TABLA_SEGMENTO
-                +" ( "+Utilidades.CAMPO_NOMBRE_CARRETERA_SEGMENTO+"," +Utilidades.CAMPO_TIPO_PAV_SEGMENTO+","+Utilidades.CAMPO_CALZADAS_SEGMENTO+","
-                +Utilidades.CAMPO_CARRILES_SEGMENTO+","+Utilidades.CAMPO_ANCHO_CARRIL+","+Utilidades.CAMPO_ANCHO_BERMA+","
-                +Utilidades.CAMPO_PRI_SEGMENTO+","+Utilidades.CAMPO_PRF_SEGMENTO+","+Utilidades.CAMPO_COMENTARIOS+")" +
-                " VALUES ('"+tvNombre_Carretera_Segmento.getText().toString()+"' , '"+campotipoPav.getText().toString()+"' , '"+campoNCalzadas.getText().toString()+"' , '"
-                +campoNCarriles.getText().toString()+"' , '"+campoAnchoCarril.getText().toString()+"' , '"
-                +campoAnchoBerma.getText().toString()+"' , '"+campoPRI.getText().toString()+"' , '"
-                +campoPRF.getText().toString()+"' , '"+campoComentarios.getText().toString()+"')";
+                +" ( "+Utilidades.CAMPO_NOMBRE_CARRETERA_SEGMENTO+","+Utilidades.CAMPO_PAV_SEGMENTO+"," +Utilidades.CAMPO_TIPO_PAV_SEGMENTO+","+Utilidades.CAMPO_CALZADAS_SEGMENTO+","
+                +Utilidades.CAMPO_CARRILES_SEGMENTO+","+Utilidades.CAMPO_ANCHO_CARRIL+","+Utilidades.CAMPO_ANCHO_BERMA+","+Utilidades.CAMPO_PRI_SEGMENTO+","
+                +Utilidades.CAMPO_PRF_SEGMENTO+","+Utilidades.CAMPO_COMENTARIOS+")" +
+                " VALUES ('"+tvNombre_Carretera_Segmento.getText().toString()+"' , '"+tvPavInt.getText().toString()+"' , '"+campotipoPav.getText().toString()+"' , '"
+                +campoNCalzadas.getText().toString()+"' , '"+campoNCarriles.getText().toString()+"' , '"+campoAnchoCarril.getText().toString()+"' , '"
+                +campoAnchoBerma.getText().toString()+"' , '"+campoPRI.getText().toString()+"' , '"+campoPRF.getText().toString()+"' , '"
+                +campoComentarios.getText().toString()+"')";
 
         db.execSQL(insert);
         Toast.makeText(getApplicationContext(),R.string.regisSeg,Toast.LENGTH_SHORT).show();

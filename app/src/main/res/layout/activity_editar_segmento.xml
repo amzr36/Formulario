@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.alejo_zr.exceldb.Segmento.RegistroSegmentoActivity">
+    tools:context="com.alejo_zr.exceldb.Segmento.EditarSegmentoActivity">
 
     <Spinner
-        android:id="@+id/spinnerTipoPav"
+        android:id="@+id/spinnerTipoPav_Editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
         />
 
     <TextView
-        android:id="@+id/tvNumero"
+        android:id="@+id/tvNumero_Editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/numero"
@@ -28,14 +28,14 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/campoNCalzadas"
+            android:id="@+id/campoNCalzadas_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/nCalzadas"
             />
         <EditText
-            android:id="@+id/campoNCarriles"
+            android:id="@+id/campoNCarriles_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -44,7 +44,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tvAncho"
+        android:id="@+id/tvAncho_Editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ancho"
@@ -57,13 +57,13 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/campoAnchoCarril"
+            android:id="@+id/campoAnchoCarril_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/anchoCarril"/>
         <EditText
-            android:id="@+id/campoAnchoBerma"
+            android:id="@+id/campoAnchoBerma_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,13 +86,13 @@
         >
 
         <EditText
-            android:id="@+id/campoPRI"
+            android:id="@+id/campoPRI_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/pri"/>
         <EditText
-            android:id="@+id/campoPRF"
+            android:id="@+id/campoPRF_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -102,44 +102,66 @@
 
 
     <EditText
-        android:id="@+id/campoComentarios"
+        android:id="@+id/campoComentarios_Editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/comentarios"/>
 
-    <Button
-        android:id="@+id/btnRegistroSegmento"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginTop"
-        android:text="@string/regisSeg"
-        android:onClick="onClick"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/marginTopBtn">
+
+        <Button
+            android:id="@+id/btnEditarSegmentoActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/editar"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/btnEliminarSegmento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/eliminar"
+            android:onClick="onClick"/>
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/tvTipoPav"
+        android:id="@+id/tv_id_segmento_editar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvTipoPav_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Tipo pavimento"
         android:visibility="visible"/>
 
     <TextView
-        android:id="@+id/tvId_Carretera_Segmento"
+        android:id="@+id/tvId_Carretera_Segmento_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/id"
         android:visibility="visible"/>
 
     <TextView
-        android:id="@+id/tvNombre_Carretera_Segmento"
+        android:id="@+id/tvNombre_Carretera_Segmento_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
         android:visibility="visible"/>
     <TextView
-        android:id="@+id/tvPavInt"
+        android:id="@+id/tvPavInt_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/nombre"
+        android:hint="@string/tipoPav"
         android:visibility="visible"/>
+
+
 
 </LinearLayout>

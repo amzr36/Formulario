@@ -15,7 +15,7 @@
     <string name="admon">Conseción, MTTO Integral, A.M.V</string>
     <string name="levantado">Levantado por: </string>
     <string name="buscar">BUSCAR</string>
-    <string name="actualizar">ACTUALIZAR</string>
+    <string name="editar">EDITAR</string>
     <string name="eliminar">ELIMINAR</string>
     <string name="title_activity_consultar_carretera">ConsultarCarreteraActivity</string>
     <string name="datosCarretera">Datos Carretera</string>
@@ -26,7 +26,7 @@
     <string name="pavRigi">Pavimento Rigido</string>
     <string name="nCalzadas">Calzadas</string>
     <string name="nCarriles">Carriles por calzada</string>
-    <string name="anchoCarril">Cariil </string>
+    <string name="anchoCarril">Carril </string>
     <string name="anchoBerma">Berma </string>
     <string name="pri">PRI</string>
     <string name="prf">PRF</string>

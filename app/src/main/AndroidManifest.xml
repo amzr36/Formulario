@@ -33,7 +33,7 @@
             android:label="@string/regisSeg"
             android:parentActivityName=".Carretera.ConsultarCarreteraActivity" />
         <activity
-            android:name=".Patologia.DanioFlexActivity"
+            android:name=".Patologia.RegistroPatoFlexActivity"
             android:label="@string/regisPatologias" />
         <activity
             android:name=".Carretera.ConsulCarreteraActivity"
@@ -61,7 +61,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".EditarCarreteraActivity"></activity>
+        <activity android:name=".Carretera.EditarCarreteraActivity" />
+        <activity android:name=".Segmento.EditarSegmentoActivity"></activity>
     </application>
 
 </manifest>

@@ -28,6 +28,7 @@ public class Utilidades {
     public static final String TABLA_SEGMENTO="segmento";
     public static final String CAMPO_ID_SEGMENTO="id_segmento";
     public static final String CAMPO_NOMBRE_CARRETERA_SEGMENTO="nombre_carretera";
+    public static final String CAMPO_PAV_SEGMENTO="PAV_SEGMENTO";
     public static final String CAMPO_TIPO_PAV_SEGMENTO="tipo_pav";
     public static final String CAMPO_CALZADAS_SEGMENTO="numero_calzadas";
     public static final String CAMPO_CARRILES_SEGMENTO="numero_carriles";
@@ -39,8 +40,8 @@ public class Utilidades {
 
 
     public static final String CREAR_TABLA_SEGMENTO="CREATE TABLE " +
-            ""+TABLA_SEGMENTO+" ("+CAMPO_ID_SEGMENTO+" INTEGER PRIMARY KEY AUTOINCREMENT, "+CAMPO_NOMBRE_CARRETERA_SEGMENTO+" TEXT,"+CAMPO_TIPO_PAV_SEGMENTO+" TEXT, "
-            +CAMPO_CALZADAS_SEGMENTO+" TEXT,"+CAMPO_CARRILES_SEGMENTO+" TEXT,"+CAMPO_ANCHO_CARRIL+" TEXT,"+CAMPO_ANCHO_BERMA+
+            ""+TABLA_SEGMENTO+" ("+CAMPO_ID_SEGMENTO+" INTEGER PRIMARY KEY AUTOINCREMENT, "+CAMPO_NOMBRE_CARRETERA_SEGMENTO+" TEXT,"+CAMPO_PAV_SEGMENTO+" INTEGER, "
+            +CAMPO_TIPO_PAV_SEGMENTO+" TEXT, "+CAMPO_CALZADAS_SEGMENTO+" TEXT,"+CAMPO_CARRILES_SEGMENTO+" TEXT,"+CAMPO_ANCHO_CARRIL+" TEXT,"+CAMPO_ANCHO_BERMA+
             " TEXT,"+CAMPO_PRI_SEGMENTO+" TEXT,"+CAMPO_PRF_SEGMENTO+" TEXT,"+CAMPO_COMENTARIOS+" TEXT)";
 
     //Constantes tabla patologia

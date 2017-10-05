@@ -10,6 +10,7 @@ public class Segmento implements Serializable {
 
     private Integer id_segmento;
     private String nombre_carretera;
+    private Integer pavInt;
     private String tipoPav;
     private String nCalzadas;
     private String nCarriles;
@@ -19,9 +20,11 @@ public class Segmento implements Serializable {
     private String prf;
     private String comentarios;
 
-    public Segmento() {
+    public Segmento(Integer id_segmento, String nombre_carretera, Integer pavInt, String tipoPav, String nCalzadas, String nCarriles, String anchoCarril,
+                    String anchoBerma, String pri, String prf, String comentarios) {
         this.id_segmento = id_segmento;
         this.nombre_carretera = nombre_carretera;
+        this.pavInt = pavInt;
         this.tipoPav = tipoPav;
         this.nCalzadas = nCalzadas;
         this.nCarriles = nCarriles;
@@ -30,6 +33,10 @@ public class Segmento implements Serializable {
         this.pri = pri;
         this.prf = prf;
         this.comentarios = comentarios;
+    }
+
+    public Segmento() {
+
     }
 
     public Integer getId_segmento() {
@@ -46,6 +53,18 @@ public class Segmento implements Serializable {
 
     public void setNombre_carretera(String nombre_carretera) {
         this.nombre_carretera = nombre_carretera;
+    }
+
+    public Integer getPavInt() {
+        return pavInt;
+    }
+
+    public void setPavInt(Integer pavInt) {
+        this.pavInt = pavInt;
+    }
+
+    public String getAnchoBerma() {
+        return anchoBerma;
     }
 
     public String getTipoPav() {
