@@ -31,9 +31,9 @@
         <activity
             android:name=".Carretera.CarreteraActivity"
             android:label="@string/datosCarretera" />
-        <activity android:name=".Carretera.EditarCarreteraActivity"
-            android:label="@string/editarCarretera"/>
-
+        <activity
+            android:name=".Carretera.EditarCarreteraActivity"
+            android:label="@string/editarCarretera" />
         <activity
             android:name=".Segmento.RegistroSegmentoActivity"
             android:label="@string/regisSeg"
@@ -44,23 +44,18 @@
         <activity
             android:name=".Segmento.SegmentoActivity"
             android:label="@string/datosSegmento" />
-        <activity android:name=".Segmento.EditarSegmentoActivity"
-            android:label="@string/editarSegmento"></activity>
-
+        <activity
+            android:name=".Segmento.EditarSegmentoActivity"
+            android:label="@string/editarSegmento" />
         <activity
             android:name=".Patologia.RegistroPatoFlexActivity"
             android:label="@string/regisPatologias" />
         <activity
             android:name=".Carretera.ConsulCarreteraActivity"
             android:label="@string/consul" />
-
-
-
         <activity android:name=".Patologia.RegistroPatologiaActivity" />
         <activity android:name=".Patologia.ConsultaPatologiaActivity" />
         <activity android:name=".Patologia.PatologiaActivity" />
-
-
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -72,7 +67,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-
+        <activity android:name=".Patologia.EditarPatologiaActivity"></activity>
     </application>
 
 </manifest>

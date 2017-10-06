@@ -1,7 +1,9 @@
 package com.alejo_zr.exceldb.Patologia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import com.alejo_zr.exceldb.R;
@@ -48,5 +50,26 @@ public class PatologiaActivity extends AppCompatActivity {
         }
     }
 
+    public void onClick (View view){
+
+        Intent intent = null;
+        switch (view.getId()){
+
+            case R.id.btnEditarPatologia:
+                intent = new Intent(PatologiaActivity.this, EditarPatologiaActivity.class);
+                intent.putExtra("tvCarrilDanio",tvCarrilDanio.getText().toString());
+                intent.putExtra("tvAclaraciones",tvAclaraciones.getText().toString());
+                intent.putExtra("tvanchRepa", tvanchRepa.getText().toString());
+                intent.putExtra("tvlarRepa",tvlarRepa.getText().toString());
+                intent.putExtra("tvdanionombre",tvdanionombre.getText().toString());
+                intent.putExtra("tvanchDanio",tvanchDanio.getText().toString());
+                intent.putExtra("tvIdSegmento",tvIdSegmento.getText().toString());
+                intent.putExtra("tvNombreCarreteraPatologiaActivity",tvNombreCarreteraPatologiaActivity.getText().toString());
+                intent.putExtra("tvIdDaño",tvIdDaño.getText().toString());
+                startActivity( intent);
+                break;
+
+        }
+    }
 
 }
