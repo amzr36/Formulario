@@ -203,7 +203,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
         switch (view.getId()){
 
             case R.id.btnRegistroPatologia:
-                Toast.makeText(getApplicationContext(),R.string.regisPatologias,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Se registro el Daño: "+campoDanioPato.getText().toString(),Toast.LENGTH_SHORT).show();
                 registrarSegmento();
                 break;
             case R.id.btnDanio:

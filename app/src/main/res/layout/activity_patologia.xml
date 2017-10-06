@@ -1,68 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alejo_zr.exceldb.PatologiaActivity">
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="com.alejo_zr.exceldb.Patologia.PatologiaActivity">
 
-    <ImageButton
-        android:id="@+id/btnEditarPatologia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_edit_black_24dp"
-        android:layout_alignParentRight="true"/>
-
-    <LinearLayout
-        android:id="@+id/llCarretera"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/btnEditarPatologia">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvCarretera_danio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnEditarPatologia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit"
+            android:layout_alignParentRight="true"/>
 
-    <LinearLayout
-        android:id="@+id/llCariil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/llCarretera">
-
-        <TextView
-            android:id="@+id/tvCarril"
+        <LinearLayout
+            android:id="@+id/llCariil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/carril"
-            android:textStyle="bold"/>
+            android:orientation="horizontal"
+            android:layout_below="@id/btnEditarPatologia">
+
+            <TextView
+                android:id="@+id/tvCarril"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/carril"
+                android:textSize="@dimen/subTitulo"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCarrilDanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vacio"/>
+
+
+        </LinearLayout>
+
+
 
         <TextView
-            android:id="@+id/tvCarrilDanio"
+            android:id="@+id/tvnombredanio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/vacio"/>
+            android:text="@string/patologia"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/marginTopTV"
+            android:layout_below="@id/llCariil"/>
+
+        <LinearLayout
+            android:id="@+id/lldanionombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvnombredanio"
+            >
+
+            <TextView
+                android:id="@+id/tvdanionombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/vacio"
+                />
+            <TextView
+                android:id="@+id/tvdanioCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tvPatologia"
+            android:id="@+id/tvDanioDimensiones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/danio_activity"
-            android:textStyle="bold"/>
+            android:text="@string/danio"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/marginTopTV"
+            android:layout_below="@+id/lldanionombre"/>
+        <LinearLayout
+            android:id="@+id/lldimendanio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvDanioDimensiones">
+            <TextView
+                android:id="@+id/tvlargodanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/largo"/>
+            <TextView
+                android:id="@+id/tvlarDanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vacio"
+                />
+            <TextView
+                android:id="@+id/tvanchodanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/anchoD"
+                />
+            <TextView
+                android:id="@+id/tvanchDanio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vacio"
+                />
+        </LinearLayout>
+
         <TextView
-            android:id="@+id/tvDanioReporte"
+            android:id="@+id/tvRepacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/vacio"/>
+            android:text="@string/reparacion"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"
+            android:layout_below="@id/lldimendanio"
+            android:layout_marginTop="@dimen/marginTopTV"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lldimenrepa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/tvRepacion">
+            <TextView
+                android:id="@+id/tvlargorepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/largo"/>
+            <TextView
+                android:id="@+id/tvlarRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vacio"
+                />
+            <TextView
+                android:id="@+id/tvanchorepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/anchoD"
+                />
+            <TextView
+                android:id="@+id/tvanchRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/vacio"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aclaraciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aclaraciones"
+            android:textSize="@dimen/subTitulo"
+            android:textStyle="bold"
+            android:layout_below="@+id/lldimenrepa"
+            android:layout_marginTop="@dimen/marginTopTV"/>
+        <TextView
+            android:id="@+id/tvAclaraciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vacio"
+            android:layout_below="@id/aclaraciones"/>
+
+        <ImageView
+            android:id="@+id/imgDanio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_base"
+            android:layout_below="@+id/tvAclaraciones"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/marginTop"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNombreCarreteraPatologiaActivity"
+            android:text="@string/nombre"
+            android:layout_below="@+id/imgDanio"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvIdSegmento"
+            android:text="@string/id"
+            android:layout_below="@+id/tvNombreCarreteraPatologiaActivity"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvIdDaño"
+            android:text="ID"
+            android:layout_below="@+id/tvIdSegmento"
+            />
 
 
-</RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</ScrollView>

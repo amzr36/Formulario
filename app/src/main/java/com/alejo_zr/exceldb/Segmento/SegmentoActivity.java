@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.alejo_zr.exceldb.ConsultaPatologiaActivity;
+import com.alejo_zr.exceldb.Patologia.ConsultaPatologiaActivity;
 import com.alejo_zr.exceldb.Patologia.RegistroPatologiaActivity;
 import com.alejo_zr.exceldb.R;
 import com.alejo_zr.exceldb.entidades.Segmento;

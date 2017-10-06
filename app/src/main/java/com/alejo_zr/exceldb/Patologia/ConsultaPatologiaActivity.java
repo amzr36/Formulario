@@ -1,5 +1,6 @@
-package com.alejo_zr.exceldb;
+package com.alejo_zr.exceldb.Patologia;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.alejo_zr.exceldb.BaseDatos;
+import com.alejo_zr.exceldb.R;
 import com.alejo_zr.exceldb.entidades.PatoFlex;
 import com.alejo_zr.exceldb.utilidades.Utilidades;
 
@@ -39,19 +42,16 @@ public class ConsultaPatologiaActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
 
-                /*
-                PatoFlex patoFlex=listaPatologia.get(posS);
-                Intent intent=new Intent(ConsultaPatologiaActivity.this,SegmentoActivity.class);
+
+                PatoFlex patologia=listaPatologias.get(posS);
+                Intent intent=new Intent(ConsultaPatologiaActivity.this, PatologiaActivity.class);
 
                 Bundle bundle=new Bundle();
-                bundle.putSerializable("segmento",segmento);
+                bundle.putSerializable("patologia",patologia);
 
                 intent.putExtras(bundle);
 
                 startActivity(intent);
-                */
-
-
 
             }
         });
