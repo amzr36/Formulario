@@ -53,7 +53,7 @@ public class ConsultarSegmentoFlexActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
 
                 Segmento segmento=listaSegmentos.get(posS);
-                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoActivity.class);
+                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoFlexActivity.class);
 
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("segmento",segmento);
@@ -92,7 +92,7 @@ public class ConsultarSegmentoFlexActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
 
                 Segmento segmento=listaSegmentos.get(posS);
-                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoActivity.class);
+                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoFlexActivity.class);
 
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("segmento",segmento);

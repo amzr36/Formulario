@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.alejo_zr.exceldb.Patologia.Flexible.ConsultaPatologiaFlexActivity;
-import com.alejo_zr.exceldb.Patologia.Flexible.RegistroPatologiaActivity;
+import com.alejo_zr.exceldb.Patologia.Flexible.RegistroPatologiaFlexActivity;
 import com.alejo_zr.exceldb.R;
 import com.alejo_zr.exceldb.entidades.Segmento;
 
@@ -61,7 +61,7 @@ public class SegmentoFlexActivity extends AppCompatActivity {
 
 
             case R.id.btnRegistrarPatologia:
-                intent = new Intent(SegmentoFlexActivity.this, RegistroPatologiaActivity.class);
+                intent = new Intent(SegmentoFlexActivity.this, RegistroPatologiaFlexActivity.class);
                 intent.putExtra("id_segmento",tv_id_segmento.getText().toString());
                 intent.putExtra("nom_carretera_segmento",tv_nombre_carretera_segmento.getText().toString());
                 startActivity(intent);

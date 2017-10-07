@@ -64,29 +64,12 @@ public class EditarCarreteraActivity extends AppCompatActivity {
             case R.id.btnEliminarCarretera:
                 eliminarCarretera();
                 break;
-            case R.id.btnVolverCarretera:
-                volverCarretera();
-                break;
+
 
         }
     }
 
-    private void volverCarretera() {
-
-        int editar = 1;
-        Intent intent = new Intent(EditarCarreteraActivity.this,CarreteraActivity.class);
-        intent.putExtra("editar",editar);
-        intent.putExtra("id_carretera_editado",campoIdEditar.getText().toString());
-        intent.putExtra("nom_carretera_editado",campoNombreEditar.getText().toString());
-        intent.putExtra("cod_carretera_editado",campoCodigoEditar.getText().toString());
-        intent.putExtra("territo_editado",campoTerritoEditar.getText().toString());
-        intent.putExtra("admon_editado",campoAdmonEditar.getText().toString());
-        intent.putExtra("levantado_editado",campoAdmonEditar.getText().toString());
-        startActivity(intent);
-
-    }
-
-    private void eliminarCarretera() {
+       private void eliminarCarretera() {
         SQLiteDatabase db=baseDatos.getWritableDatabase();
         String[] parametros={campoIdEditar.getText().toString()};
 
@@ -112,7 +95,7 @@ public class EditarCarreteraActivity extends AppCompatActivity {
         values.put(Utilidades.CAMPO_LEVANTADO_CARRETERA,campoLevantadoEditar.getText().toString());
 
         db.update(Utilidades.TABLA_CARRETERA,values,Utilidades.CAMPO_ID_CARRETERA+"=?",parametros);
-        Toast.makeText(getApplicationContext(),"Ya se edito la Carretera"+campoNombreEditar.getText().toString(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Se editó la carretera"+campoNombreEditar.getText().toString(),Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(EditarCarreteraActivity.this,ConsultarCarreteraActivity.class);
         startActivity(intent);
         db.close();
