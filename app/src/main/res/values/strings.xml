@@ -2,6 +2,9 @@
     <string name="app_name">ExcelDB</string>
     <string name="regis">REGISTRAR CARRETERA</string>
     <string name="consul">CONSULTAR CARRETERA</string>
+    <string name="regissegFlex">REGISTRAR SEGMENTO FLEXIBLE</string>
+    <string name="regissegRigi">REGISTRAR SEGMENTO RIGIDO</string>
+    <string name="seRegis">SE REGISTRÓ EL SEGMENTO</string>
     <string name="regisSeg">REGISTRAR SEGMENTO</string>
     <string name="consulSeg">CONSULTAR SEGMENTOS</string>
     <string name="regisPatologias">REGISTRO PATOLOGIAS</string>

@@ -1,4 +1,4 @@
-package com.alejo_zr.exceldb.Patologia;
+package com.alejo_zr.exceldb.Patologia.Flexible;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.alejo_zr.exceldb.R;
 import com.alejo_zr.exceldb.entidades.PatoFlex;
 
-public class PatologiaActivity extends AppCompatActivity {
+public class PatologiaFlexActivity extends AppCompatActivity {
 
     TextView tvIdDaño,tvIdSegmento,tvNombreCarreteraPatologiaActivity,tvCarrilDanio,tvAclaraciones,tvanchRepa,tvlarRepa,tvdanionombre,tvlarDanio,tvanchDanio;
 
@@ -18,7 +18,7 @@ public class PatologiaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patologia);
+        setContentView(R.layout.activity_patologia_flex);
 
         tvCarrilDanio= (TextView) findViewById(R.id.tvCarrilDanio);
         tvAclaraciones=(TextView) findViewById(R.id.tvAclaraciones);
@@ -56,7 +56,7 @@ public class PatologiaActivity extends AppCompatActivity {
         switch (view.getId()){
 
             case R.id.btnEditarPatologia:
-                intent = new Intent(PatologiaActivity.this, EditarPatologiaActivity.class);
+                intent = new Intent(PatologiaFlexActivity.this, EditarPatologiaActivity.class);
                 intent.putExtra("tvCarrilDanio",tvCarrilDanio.getText().toString());
                 intent.putExtra("tvAclaraciones",tvAclaraciones.getText().toString());
                 intent.putExtra("tvanchRepa", tvanchRepa.getText().toString());

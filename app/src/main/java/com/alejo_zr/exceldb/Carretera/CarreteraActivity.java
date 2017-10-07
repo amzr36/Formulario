@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alejo_zr.exceldb.R;
-import com.alejo_zr.exceldb.Segmento.ConsultarSegmentoActivity;
-import com.alejo_zr.exceldb.Segmento.RegistroSegmentoActivity;
+import com.alejo_zr.exceldb.Segmento.Flexible.ConsultarSegmentoFlexActivity;
 import com.alejo_zr.exceldb.entidades.Carretera;
 
 public class CarreteraActivity extends AppCompatActivity {
@@ -55,15 +55,16 @@ public class CarreteraActivity extends AppCompatActivity {
         Intent intent = null;
         switch (view.getId()) {
 
-            case R.id.btnRegistroSegmento:
-                intent = new Intent(CarreteraActivity.this,RegistroSegmentoActivity.class);
+            case R.id.btnSegmentoFlexible:
+                intent = new Intent(CarreteraActivity.this, ConsultarSegmentoFlexActivity.class);
                 intent.putExtra("id_carretera",tvIdCarretera.getText().toString());
                 intent.putExtra("nom_carretera",tvNombreCarretera.getText().toString());
                 startActivity(intent);
                 break;
-            case R.id.btnConsultarSegmento:
-                intent = new Intent(CarreteraActivity.this,ConsultarSegmentoActivity.class);
-                startActivity(intent);
+            case R.id.btnSegmentoRigido:
+                Toast.makeText(getApplicationContext(),"ABRE CONSUKTAR RIGIDO",Toast.LENGTH_SHORT).show();
+                //intent = new Intent(CarreteraActivity.this,ConsultarSegmentoActivity.class);
+                //startActivity(intent);
                 break;
 
             case R.id.btnEditarCarretera:

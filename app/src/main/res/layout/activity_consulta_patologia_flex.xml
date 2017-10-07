@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alejo_zr.exceldb.Patologia.Flexible.ConsultaPatologiaFlexActivity">
+
+    <TextView
+        android:id="@+id/tvnomCarretera_consultar_patoFlex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"/>
+    <TextView
+        android:id="@+id/tvIdSegmento_consultar_patoflex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        android:layout_below="@+id/tvnomCarretera_consultar_patoFlex"/>
+
+    <ListView
+        android:id="@+id/listViewPatologiaFlex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvIdSegmento_consultar_patoflex"
+        />
+
+</RelativeLayout>

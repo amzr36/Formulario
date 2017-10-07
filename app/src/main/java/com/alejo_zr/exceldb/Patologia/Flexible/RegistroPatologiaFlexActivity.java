@@ -1,4 +1,4 @@
-package com.alejo_zr.exceldb.Patologia;
+package com.alejo_zr.exceldb.Patologia.Flexible;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -38,7 +38,7 @@ import java.io.File;
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class RegistroPatologiaActivity extends AppCompatActivity {
+public class RegistroPatologiaFlexActivity extends AppCompatActivity {
 
     private final String CARPETA_RAIZ="InventarioVial/";
     private final String RUTA_IMAGEN=CARPETA_RAIZ+"InventarioVial";
@@ -63,7 +63,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_patologia);
+        setContentView(R.layout.activity_registro_patologia_flex);
 
         imagen= (ImageView) findViewById(R.id.imagemId);
         botonCargar= (ImageButton) findViewById(R.id.btnDanio);
@@ -239,7 +239,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
     private void cargarImagen() {
 
         final CharSequence[] opciones={"Tomar Foto","Cargar Imagen","Cancelar"};
-        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroPatologiaActivity.this);
+        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroPatologiaFlexActivity.this);
         alertOpciones.setTitle("Seleccione una Opción");
         alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override
@@ -351,7 +351,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
     }
 
     private void cargarDialogoRecomendacion() {
-        AlertDialog.Builder dialogo=new AlertDialog.Builder(RegistroPatologiaActivity.this);
+        AlertDialog.Builder dialogo=new AlertDialog.Builder(RegistroPatologiaFlexActivity.this);
         dialogo.setTitle("Permisos Desactivados");
         dialogo.setMessage("Debe aceptar los permisos para el correcto funcionamiento de la App");
 
@@ -367,7 +367,7 @@ public class RegistroPatologiaActivity extends AppCompatActivity {
 
     private void solicitarPermisosManual() {
         final CharSequence[] opciones={"si","no"};
-        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroPatologiaActivity.this);
+        final AlertDialog.Builder alertOpciones=new AlertDialog.Builder(RegistroPatologiaFlexActivity.this);
         alertOpciones.setTitle("¿Desea configurar los permisos de forma manual?");
         alertOpciones.setItems(opciones, new DialogInterface.OnClickListener() {
             @Override

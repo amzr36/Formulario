@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alejo_zr.exceldb.Segmento.SegmentoActivity">
+    tools:context="com.alejo_zr.exceldb.Segmento.Flexible.SegmentoFlexActivity">
 
     <ImageButton
         android:id="@+id/btnEditarSegmento"
@@ -211,11 +211,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_nombre_carretera_segmento"
         android:hint="@string/segmento"/>
-    <TextView
-        android:id="@+id/tv_PavInt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_id_segmento"
-        android:hint="@string/segmento"/>
+
 
 </RelativeLayout>

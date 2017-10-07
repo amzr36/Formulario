@@ -30,32 +30,34 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Carretera.CarreteraActivity"
+            android:parentActivityName=".Carretera.ConsultarCarreteraActivity"
             android:label="@string/datosCarretera" />
         <activity
             android:name=".Carretera.EditarCarreteraActivity"
             android:label="@string/editarCarretera" />
         <activity
-            android:name=".Segmento.RegistroSegmentoActivity"
+            android:name=".Segmento.Flexible.RegistroSegmentoFlexActivity"
             android:label="@string/regisSeg"
             android:parentActivityName=".Carretera.ConsultarCarreteraActivity" />
         <activity
-            android:name=".Segmento.ConsultarSegmentoActivity"
+            android:name=".Segmento.Flexible.ConsultarSegmentoFlexActivity"
+            android:parentActivityName=".Carretera.CarreteraActivity"
             android:label="@string/consulSeg" />
         <activity
-            android:name=".Segmento.SegmentoActivity"
+            android:name=".Segmento.Flexible.SegmentoActivity"
             android:label="@string/datosSegmento" />
         <activity
-            android:name=".Segmento.EditarSegmentoActivity"
+            android:name=".Segmento.Flexible.EditarSegmentoActivity"
             android:label="@string/editarSegmento" />
         <activity
-            android:name=".Patologia.RegistroPatoFlexActivity"
+            android:name=".Patologia.Flexible.RegistroPatoFlexActivity"
             android:label="@string/regisPatologias" />
         <activity
             android:name=".Carretera.ConsulCarreteraActivity"
             android:label="@string/consul" />
-        <activity android:name=".Patologia.RegistroPatologiaActivity" />
-        <activity android:name=".Patologia.ConsultaPatologiaActivity" />
-        <activity android:name=".Patologia.PatologiaActivity" />
+        <activity android:name=".Patologia.Flexible.RegistroPatologiaActivity" />
+        <activity android:name=".Patologia.Flexible.ConsultaPatologiaFlexActivity" />
+        <activity android:name=".Patologia.Flexible.PatologiaActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -67,7 +69,7 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".Patologia.EditarPatologiaActivity"></activity>
+        <activity android:name=".Patologia.Flexible.EditarPatologiaActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.alejo_zr.exceldb.Segmento;
+package com.alejo_zr.exceldb.Segmento.Flexible;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -124,7 +124,7 @@ public class EditarSegmentoActivity extends AppCompatActivity {
         db.delete(Utilidades.TABLA_SEGMENTO,Utilidades.CAMPO_ID_SEGMENTO+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Ya se Eliminó la carretera",Toast.LENGTH_LONG).show();
         tv_id_segmento_editar.setText("");
-        Intent intent = new Intent(EditarSegmentoActivity.this,ConsultarSegmentoActivity.class);
+        Intent intent = new Intent(EditarSegmentoActivity.this,ConsultarSegmentoFlexActivity.class);
         startActivity(intent);
         db.close();
     }
@@ -147,7 +147,7 @@ public class EditarSegmentoActivity extends AppCompatActivity {
 
         db.update(Utilidades.TABLA_SEGMENTO,values,Utilidades.CAMPO_ID_SEGMENTO+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Se edito el segmento",Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(EditarSegmentoActivity.this,ConsultarSegmentoActivity.class);
+        Intent intent = new Intent(EditarSegmentoActivity.this,ConsultarSegmentoFlexActivity.class);
         startActivity(intent);
         db.close();
 

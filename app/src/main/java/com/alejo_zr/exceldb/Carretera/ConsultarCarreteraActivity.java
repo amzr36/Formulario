@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.alejo_zr.exceldb.BaseDatos;
 import com.alejo_zr.exceldb.R;
@@ -25,6 +24,7 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
     ArrayList<Carretera> listaCarreteras;
 
     BaseDatos baseDatos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +61,8 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
 
     }
 
-    protected void onRestart() {
-        super.onRestart();
-        Toast.makeText(this, "On Start", Toast.LENGTH_SHORT).show();
+    protected void onStart() {
+        super.onStart();
         baseDatos=new BaseDatos(this);
 
         listViewCarreteras= (ListView) findViewById(R.id.listViewCarretera);
@@ -77,12 +76,12 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
 
-                Carretera user=listaCarreteras.get(pos);
+                Carretera carretera=listaCarreteras.get(pos);
 
                 Intent intent=new Intent(ConsultarCarreteraActivity.this,CarreteraActivity.class);
 
                 Bundle bundle=new Bundle();
-                bundle.putSerializable("usuario",user);
+                bundle.putSerializable("carretera",carretera);
 
                 intent.putExtras(bundle);
                 startActivity(intent);

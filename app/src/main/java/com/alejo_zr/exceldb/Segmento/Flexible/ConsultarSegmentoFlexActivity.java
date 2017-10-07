@@ -1,4 +1,4 @@
-package com.alejo_zr.exceldb.Segmento;
+package com.alejo_zr.exceldb.Segmento.Flexible;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.alejo_zr.exceldb.BaseDatos;
 import com.alejo_zr.exceldb.R;
@@ -17,22 +19,29 @@ import com.alejo_zr.exceldb.utilidades.Utilidades;
 
 import java.util.ArrayList;
 
-public class ConsultarSegmentoActivity extends AppCompatActivity {
+public class ConsultarSegmentoFlexActivity extends AppCompatActivity {
 
     ListView listViewSegmentos;
     ArrayList<String> listaInformacionSegmentos;
     ArrayList<Segmento> listaSegmentos;
+    TextView tvnomCarretera_consultar_segmentoFlex;
 
     BaseDatos baseDatos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consultar_segmento);
+        setContentView(R.layout.activity_consultar_segmento_flex);
 
         baseDatos=new BaseDatos(this);
 
         listViewSegmentos = (ListView) findViewById(R.id.listViewSegmento);
+        tvnomCarretera_consultar_segmentoFlex = (TextView) findViewById(R.id.tvnomCarretera_consultar_segmentoFlex);
+
+        Bundle bundle = getIntent().getExtras();
+        //String dato_id = bundle.getString("id_carretera").toString();
+        String dato_nom = bundle.getString("nom_carretera").toString();
+        tvnomCarretera_consultar_segmentoFlex.setText(dato_nom);
 
         consultarListaSegmentos();
 
@@ -44,7 +53,7 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
 
                 Segmento segmento=listaSegmentos.get(posS);
-                Intent intent=new Intent(ConsultarSegmentoActivity.this,SegmentoActivity.class);
+                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoActivity.class);
 
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("segmento",segmento);
@@ -60,11 +69,18 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
 
     }
 
-    protected void onRestart() {
-        super.onRestart();
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(),"On Start",Toast.LENGTH_SHORT).show();
         baseDatos=new BaseDatos(this);
 
         listViewSegmentos = (ListView) findViewById(R.id.listViewSegmento);
+        tvnomCarretera_consultar_segmentoFlex = (TextView) findViewById(R.id.tvnomCarretera_consultar_segmentoFlex);
+
+        Bundle bundle = getIntent().getExtras();
+        //String dato_id = bundle.getString("id_carretera").toString();
+        String dato_nom = bundle.getString("nom_carretera").toString();
+        tvnomCarretera_consultar_segmentoFlex.setText(dato_nom);
 
         consultarListaSegmentos();
 
@@ -76,7 +92,7 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int posS, long l) {
 
                 Segmento segmento=listaSegmentos.get(posS);
-                Intent intent=new Intent(ConsultarSegmentoActivity.this,SegmentoActivity.class);
+                Intent intent=new Intent(ConsultarSegmentoFlexActivity.this,SegmentoActivity.class);
 
                 Bundle bundle=new Bundle();
                 bundle.putSerializable("segmento",segmento);
@@ -84,8 +100,12 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
                 intent.putExtras(bundle);
 
                 startActivity(intent);
+
+
+
             }
         });
+
     }
 
     private void consultarListaSegmentos() {
@@ -122,11 +142,28 @@ public class ConsultarSegmentoActivity extends AppCompatActivity {
 
         listaInformacionSegmentos = new ArrayList<String>();
 
-
-
         for (int i=0; i<listaSegmentos.size();i++){
-            listaInformacionSegmentos.add("Carretera: "+listaSegmentos.get(i).getNombre_carretera()+"- Segmento: "
-                    +listaSegmentos.get(i).getId_segmento());
+            boolean nomCarretera = tvnomCarretera_consultar_segmentoFlex.getText().toString().equals(listaSegmentos.get(i).getNombre_carretera());
+            if(nomCarretera==true){
+                listaInformacionSegmentos.add("Carretera: "+listaSegmentos.get(i).getNombre_carretera()+"PRI: "+listaSegmentos.get(i).getPri());
+            }else{
+                listaInformacionSegmentos.add("NO ES DE LA CARRETERA");
+            }
+
         }
     }
+
+    public void onClick(View view) {
+
+        switch (view.getId()){
+            case R.id.floabtnAddSegFlex:
+                Intent intent = new Intent(ConsultarSegmentoFlexActivity.this,RegistroSegmentoFlexActivity.class);
+                intent.putExtra("nom_carretera",tvnomCarretera_consultar_segmentoFlex.getText().toString());
+                startActivity(intent);
+                break;
+        }
+
+
+    }
+
 }

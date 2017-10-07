@@ -129,20 +129,20 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnRegistroSegmento"
+        android:id="@+id/btnSegmentoFlexible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/llLevantado"
-        android:text="@string/regisSeg"
+        android:text="@string/pavFlex"
         android:layout_marginTop="@dimen/marginTopBtn"
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/btnConsultarSegmento"
+        android:id="@+id/btnSegmentoRigido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnRegistroSegmento"
-        android:text="@string/consulSeg"
+        android:layout_below="@id/btnSegmentoFlexible"
+        android:text="@string/pavRigi"
         android:layout_marginTop="@dimen/marginTopBtn"
         android:onClick="onClick"/>
 
@@ -151,7 +151,7 @@
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:hint="@string/id"
-        android:layout_below="@id/btnConsultarSegmento"
+        android:layout_below="@id/btnSegmentoRigido"
         android:textStyle="bold"
         android:visibility="visible"/>
 
