@@ -2,6 +2,7 @@ package com.alejo_zr.exceldb.Carretera;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -13,7 +14,10 @@ import com.alejo_zr.exceldb.utilidades.Utilidades;
 
 public class RegistroCarreteraActivity extends AppCompatActivity {
 
-    EditText campoNombre,campoCodigo,campoTerrito,campoLevantado,campoAdmon;
+    private EditText campoNombre,campoCodigo,campoTerrito,campoLevantado,campoAdmon;
+    private TextInputLayout inputLayoutNombre;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +30,26 @@ public class RegistroCarreteraActivity extends AppCompatActivity {
         campoTerrito = (EditText) findViewById(R.id.campoTerritorial);
         campoAdmon = (EditText) findViewById(R.id.campoAdmon);
         campoLevantado = (EditText) findViewById(R.id.campoLevantado);
+
+        inputLayoutNombre= (TextInputLayout) findViewById(R.id.input_layout_nombre);
+
     }
 
     public void onClick(View view) {
-        registrarCarretera();
+        verficarCampo();
+    }
+
+    private void verficarCampo() {
+        boolean isValid = true;
+        if(campoNombre.getText().toString().trim().isEmpty()){
+            inputLayoutNombre.setError("Ingrese el nombre");
+            isValid = false;
+        }else{
+            inputLayoutNombre.setErrorEnabled(false);
+        }
+        if(isValid){
+            registrarCarretera();
+        }
     }
 
     //Metodo con el cual se registran los datos en la base de datos correspondientes a la tabla 'Carretera'

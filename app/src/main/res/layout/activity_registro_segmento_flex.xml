@@ -8,6 +8,7 @@
     android:layout_margin="@dimen/activity_horizontal_margin"
     tools:context="com.alejo_zr.exceldb.Segmento.Flexible.RegistroSegmentoFlexActivity">
 
+
     <TextView
         android:id="@+id/tvTipoPav"
         android:layout_width="wrap_content"
@@ -32,19 +33,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/campoNCalzadas"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_camponCalzadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/nCalzadas"
-            />
-        <EditText
-            android:id="@+id/campoNCarriles"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoNCalzadas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nCalzadas"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoNCarriles"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/nCarriles"/>
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoNCarriles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nCarriles"/>
+        </android.support.design.widget.TextInputLayout>
+
 
     </LinearLayout>
 
@@ -61,20 +75,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/campoAnchoCarril"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoAnchoCarril"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/anchoCarril"/>
-        <EditText
-            android:id="@+id/campoAnchoBerma"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoAnchoCarril"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anchoCarril"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoAnchoBerma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/anchoBerma"/>
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoAnchoBerma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/anchoBerma"/>
+        </android.support.design.widget.TextInputLayout>
+
 
     </LinearLayout>
+
+
 
     <TextView
         android:layout_width="match_parent"
@@ -90,27 +120,47 @@
         android:layout_height="wrap_content"
         >
 
-        <EditText
-            android:id="@+id/campoPRI"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoPRI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/pri"/>
-        <EditText
-            android:id="@+id/campoPRF"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoPRI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pri"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoPRF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/prf"/>
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/campoPRF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prf"/>
+
+        </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/campoComentarios"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_campoComentarios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/comentarios"/>
+        android:layout_weight="1">
+        <EditText
+            android:id="@+id/campoComentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/comentarios"/>
+    </android.support.design.widget.TextInputLayout>
+
+
 
     <Button
         android:id="@+id/btnRegistroSegmento"

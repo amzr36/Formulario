@@ -13,7 +13,7 @@ import com.alejo_zr.exceldb.entidades.Carretera;
 
 public class CarreteraActivity extends AppCompatActivity {
 
-    TextView tvIdCarretera,tvNomCarretera,tvNombreCarretera,tvCodigoCarretera,tvTerritorialCarretera,tvAdmonCarretera,
+    private TextView tvIdCarretera,tvNomCarretera,tvNombreCarretera,tvCodigoCarretera,tvTerritorialCarretera,tvAdmonCarretera,
             tvLevantadoCarretera;
 
     @Override

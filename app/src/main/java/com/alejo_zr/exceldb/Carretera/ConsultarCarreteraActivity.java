@@ -19,9 +19,9 @@ import java.util.ArrayList;
 
 public class ConsultarCarreteraActivity extends AppCompatActivity {
 
-    ListView listViewCarreteras;
-    ArrayList<String> listaInformacion;
-    ArrayList<Carretera> listaCarreteras;
+    private ListView listViewCarreteras;
+    private ArrayList<String> listaInformacion;
+    private ArrayList<Carretera> listaCarreteras;
 
     BaseDatos baseDatos;
 

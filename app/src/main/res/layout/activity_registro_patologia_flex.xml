@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alejo_zr.exceldb.Patologia.Flexible.RegistroPatologiaActivity">
+    tools:context="com.alejo_zr.exceldb.Patologia.Flexible.RegistroPatologiaFlexActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,6 +114,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_campoLargoRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <EditText
                 android:id="@+id/campoLargoRepa"
@@ -121,20 +125,31 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/largo"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_campoAnchoRepa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/campoAnchoRepa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/anchoD"/>
+        </android.support.design.widget.TextInputLayout>
 
         </LinearLayout>
 
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoAclaraciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <EditText
             android:id="@+id/campoAclaraciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/aclaraciones"/>
+        </android.support.design.widget.TextInputLayout>
         <TextView
             android:id="@+id/tv_foto_danio"
             android:layout_width="match_parent"

@@ -2,6 +2,7 @@ package com.alejo_zr.exceldb.Segmento.Flexible;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
@@ -15,15 +16,15 @@ import com.alejo_zr.exceldb.utilidades.Utilidades;
 public class RegistroSegmentoFlexActivity extends AppCompatActivity {
 
 
-    EditText campoNCalzadas, campoNCarriles, campoAnchoCarril, campoAnchoBerma, campoPRI, campoPRF, campoComentarios;
-    TextView tvId_Carretera_Segmento,tvNombre_Carretera_Segmento,campotipoPav;
+    private EditText campoNCalzadas, campoNCarriles, campoAnchoCarril, campoAnchoBerma, campoPRI, campoPRF, campoComentarios;
+    private TextView tvId_Carretera_Segmento,tvNombre_Carretera_Segmento,campotipoPav;
+    private TextInputLayout input_camponCalzadas,input_campoNCarriles,input_campoAnchoCarril,input_campoAnchoBerma,input_campoPRI;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_segmento_flex);
-
 
 
         campoNCalzadas = (EditText) findViewById(R.id.campoNCalzadas);
@@ -37,10 +38,14 @@ public class RegistroSegmentoFlexActivity extends AppCompatActivity {
         tvId_Carretera_Segmento = (TextView) findViewById(R.id.tvId_Carretera_Segmento);
         tvNombre_Carretera_Segmento = (TextView) findViewById(R.id.tvNombre_Carretera_Segmento);
 
+        input_camponCalzadas = (TextInputLayout) findViewById(R.id.input_camponCalzadas);
+        input_campoNCarriles= (TextInputLayout) findViewById(R.id.input_campoNCarriles );
+        input_campoAnchoCarril= (TextInputLayout) findViewById(R.id.input_campoAnchoCarril );
+        input_campoAnchoBerma= (TextInputLayout) findViewById(R.id.input_campoAnchoBerma);
+        input_campoPRI= (TextInputLayout) findViewById(R.id.input_campoPRI);
 
 
         Bundle bundle = getIntent().getExtras();
-        //String dato_id = bundle.getString("id_carretera").toString();
         String dato_nom = bundle.getString("nom_carretera").toString();
         tvNombre_Carretera_Segmento.setText(dato_nom);
 
@@ -48,7 +53,49 @@ public class RegistroSegmentoFlexActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        registrarSegmento();
+        verificarDatos();
+
+    }
+
+    /**Se verifica que los datos minimos sean diligenciados**/
+
+    private void verificarDatos() {
+        boolean isValid = true;
+        if(campoNCalzadas.getText().toString().trim().isEmpty()){
+            input_camponCalzadas.setError("Ingrese el número de calzadas");
+            isValid=false;
+        }else{
+            input_camponCalzadas.setErrorEnabled(false);
+        }
+        if(campoNCarriles.getText().toString().trim().isEmpty()){
+            input_campoNCarriles.setError("Ingrese el número de carriles");
+            isValid=false;
+        }else{
+            input_campoNCarriles.setErrorEnabled(false);
+        }
+        if(campoAnchoCarril.getText().toString().trim().isEmpty()){
+            input_campoAnchoCarril.setError("Ingrese el ancho de el carril");
+            isValid=false;
+        }else{
+            input_campoAnchoCarril.setErrorEnabled(false);
+        }
+        if(campoAnchoBerma.getText().toString().trim().isEmpty()){
+            input_campoAnchoBerma.setError("Ingrese el ancho de la berma");
+            isValid=false;
+        }else{
+            input_campoAnchoBerma.setErrorEnabled(false);
+        }
+        if(campoPRI.getText().toString().trim().isEmpty()){
+            input_campoPRI.setError("Ingrese el PRI");
+            isValid=false;
+        }else{
+            input_campoPRI.setErrorEnabled(false);
+        }
+
+
+        if(isValid){
+            registrarSegmento();
+        }
     }
 
     private void registrarSegmento() {

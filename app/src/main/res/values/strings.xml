@@ -3,7 +3,7 @@
     <string name="regis">REGISTRAR CARRETERA</string>
     <string name="consul">CONSULTAR CARRETERA</string>
     <string name="regissegFlex">REGISTRAR SEGMENTO FLEXIBLE</string>
-    <string name="regissegRigi">REGISTRAR SEGMENTO RIGIDO</string>
+    <string name="regissegRigi">REGISTRAR SEGMENTO RíGIDO</string>
     <string name="seRegis">SE REGISTRÓ EL SEGMENTO</string>
     <string name="regisSeg">REGISTRAR SEGMENTO</string>
     <string name="consulSeg">CONSULTAR SEGMENTOS</string>
@@ -13,7 +13,7 @@
     <string name="exportar">Exportar</string>
     <string name="id">ID</string>
     <string name="nombre">Nombre: </string>
-    <string name="codigo">Codigo:</string>
+    <string name="codigo">Código:</string>
     <string name="territorial">Territorial: </string>
     <string name="admon">Conseción, MTTO Integral, A.M.V</string>
     <string name="levantado">Levantado por: </string>
@@ -34,7 +34,7 @@
     <string name="pri">PRI</string>
     <string name="prf">PRF</string>
     <string name="comentarios">Comentarios</string>
-    <string name="numero">Numero de: </string>
+    <string name="numero">Número de: </string>
     <string name="ancho">Ancho (m):</string>
     <string name="carril">Carril</string>
     <string name="patologia">Patología</string>
@@ -52,6 +52,11 @@
     <string name="seleccioneDanio">Seleccione el tipo de daño</string>
     <string name="editarSegmento">EDITAR SEGMENTO</string>
     <string name="editarCarretera">Editar CARRETERA</string>
+    <string name="validarNCalzadas">Ingrese el numero de calzadas</string>
+    <string name="validarNCarriles">Ingrese el numero de carriles</string>
+    <string name="validarAnchoCarril">Ingrese el ancho del carril</string>
+    <string name="validarAnchoBerma">Ingrese el ancho de la berma</string>
+    <string name="validarPri">Ingrese el PRI</string>
 
     <!--Daños Pavimento Flexible!-->
     <string name="fisuras_long_transversales">Fisuras Longitudinales y transversales</string>

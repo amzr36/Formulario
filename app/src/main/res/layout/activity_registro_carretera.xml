@@ -8,33 +8,67 @@
     tools:context="com.alejo_zr.exceldb.Carretera.RegistroCarreteraActivity">
 
 
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/campoNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nombre"/>
 
-    <EditText
-        android:id="@+id/campoNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/nombre"/>
+    </android.support.design.widget.TextInputLayout>
 
-    <EditText
-        android:id="@+id/campoCodigo"
+    <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/campoCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/codigo"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/codigo"/>
-    <EditText
-        android:id="@+id/campoTerritorial"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/campoTerritorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/territorial"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/territorial"/>
-    <EditText
-        android:id="@+id/campoAdmon"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/campoAdmon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/admon"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/admon"/>
-    <EditText
-        android:id="@+id/campoLevantado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/levantado"/>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/campoLevantado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/levantado"/>
+
+    </android.support.design.widget.TextInputLayout>
+
 
     <Button
         android:id="@+id/btnRegistro"

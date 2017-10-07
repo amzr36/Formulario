@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alejo_zr.exceldb.BaseDatos;
 import com.alejo_zr.exceldb.R;
@@ -71,7 +70,7 @@ public class ConsultarSegmentoFlexActivity extends AppCompatActivity {
 
     protected void onStart() {
         super.onStart();
-        Toast.makeText(getApplicationContext(),"On Start",Toast.LENGTH_SHORT).show();
+
         baseDatos=new BaseDatos(this);
 
         listViewSegmentos = (ListView) findViewById(R.id.listViewSegmento);
