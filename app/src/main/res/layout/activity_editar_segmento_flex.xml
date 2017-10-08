@@ -6,28 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="@dimen/activity_horizontal_margin"
-    tools:context="com.alejo_zr.exceldb.Segmento.Flexible.EditarSegmentoActivity">
+    tools:context="com.alejo_zr.exceldb.Segmento.Flexible.EditarSegmentoFlexActivity">
 
     <TextView
         android:id="@+id/tvTipoPav_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tipoPav"
-        android:textSize="@dimen/subTitulo"
+        android:text="@string/pavFlex"
+        android:textSize="@dimen/titulo"
         android:textStyle="bold"
-        />
-    <Spinner
-        android:id="@+id/spinnerTipoPavEditar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         />
 
-
-    <TextView
-        android:id="@+id/tvTipoPav_Editar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tipo pavimento" />
 
     <TextView
         android:id="@+id/tvNumero_Editar"
@@ -35,13 +25,15 @@
         android:layout_height="wrap_content"
         android:text="@string/numero"
         android:textSize="@dimen/subTitulo"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/marginTopTV"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoNCalzadas_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,6 +48,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoNCarriles_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -86,6 +79,7 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoAnchoCarril_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -97,6 +91,7 @@
                 android:hint="@string/anchoCarril"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_campoAnchoBerma_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -154,17 +149,16 @@
 
     </LinearLayout>
 
-
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         >
         <EditText
             android:id="@+id/campoComentarios_Editar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/comentarios"/>
+            android:hint="@string/comentarios"
+            android:layout_marginTop="@dimen/marginTop"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -210,13 +204,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/nombre"
-        android:visibility="invisible"/>
+        android:visibility="visible"/>
     <TextView
         android:id="@+id/tvPavInt_Editar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/tipoPav"
-        android:visibility="invisible"/>
+        android:visibility="visible"/>
+
 
 
 

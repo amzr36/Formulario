@@ -74,7 +74,7 @@ public class SegmentoFlexActivity extends AppCompatActivity {
                 break;
 
             case R.id.btnEditarSegmento:
-                intent = new Intent (SegmentoFlexActivity.this, EditarSegmentoActivity.class);
+                intent = new Intent (SegmentoFlexActivity.this, EditarSegmentoFlexActivity.class);
                 intent.putExtra("tv_id_segmento",tv_id_segmento.getText().toString());
                 intent.putExtra("tv_nombre_carretera_segmento",tv_nombre_carretera_segmento.getText().toString());
                 intent.putExtra("tvPav" , tvPav.getText().toString());
