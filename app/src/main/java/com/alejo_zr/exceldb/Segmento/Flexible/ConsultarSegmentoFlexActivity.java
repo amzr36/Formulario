@@ -144,9 +144,9 @@ public class ConsultarSegmentoFlexActivity extends AppCompatActivity {
         for (int i=0; i<listaSegmentos.size();i++){
             boolean nomCarretera = tvnomCarretera_consultar_segmentoFlex.getText().toString().equals(listaSegmentos.get(i).getNombre_carretera());
             if(nomCarretera==true){
-                listaInformacionSegmentos.add("Carretera: "+listaSegmentos.get(i).getNombre_carretera()+"PRI: "+listaSegmentos.get(i).getPri());
+                listaInformacionSegmentos.add("Carretera: "+listaSegmentos.get(i).getNombre_carretera()+" - PRI: "+listaSegmentos.get(i).getPri());
             }else{
-                listaInformacionSegmentos.add("NO ES DE LA CARRETERA");
+                //listaInformacionSegmentos.add("NO ES DE LA CARRETERA");
             }
 
         }
