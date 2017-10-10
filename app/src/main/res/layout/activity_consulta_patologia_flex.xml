@@ -10,12 +10,22 @@
         android:id="@+id/tvnomCarretera_consultar_patoFlex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/nombre"/>
+        android:text="@string/nombre"
+        android:textSize="@dimen/titulo"/>
+    <TextView
+        android:id="@+id/tvIdSegmento_consultarFlex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvnomCarretera_consultar_patoFlex"
+        android:text="@string/segmento"
+        android:textSize="@dimen/subTitulo"/>
     <TextView
         android:id="@+id/tvIdSegmento_consultar_patoflex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/id"
+        android:textSize="@dimen/subTitulo"
+        android:layout_toRightOf="@+id/tvnomCarretera_consultar_patoFlex"
         android:layout_below="@+id/tvnomCarretera_consultar_patoFlex"/>
 
     <ListView

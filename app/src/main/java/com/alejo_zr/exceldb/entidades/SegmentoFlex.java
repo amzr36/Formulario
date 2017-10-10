@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by Alejo on 28/09/2017.
  */
 
-public class Segmento implements Serializable {
+public class SegmentoFlex implements Serializable {
 
     private Integer id_segmento;
     private String nombre_carretera;
@@ -20,8 +20,8 @@ public class Segmento implements Serializable {
     private String prf;
     private String comentarios;
 
-    public Segmento(Integer id_segmento, String nombre_carretera, Integer pavInt, String tipoPav, String nCalzadas, String nCarriles, String anchoCarril,
-                    String anchoBerma, String pri, String prf, String comentarios) {
+    public SegmentoFlex(Integer id_segmento, String nombre_carretera, Integer pavInt, String tipoPav, String nCalzadas,
+                        String nCarriles, String anchoCarril, String anchoBerma, String pri, String prf, String comentarios) {
         this.id_segmento = id_segmento;
         this.nombre_carretera = nombre_carretera;
         this.pavInt = pavInt;
@@ -35,7 +35,7 @@ public class Segmento implements Serializable {
         this.comentarios = comentarios;
     }
 
-    public Segmento() {
+    public SegmentoFlex() {
 
     }
 
@@ -61,10 +61,6 @@ public class Segmento implements Serializable {
 
     public void setPavInt(Integer pavInt) {
         this.pavInt = pavInt;
-    }
-
-    public String getAnchoBerma() {
-        return anchoBerma;
     }
 
     public String getTipoPav() {
@@ -99,7 +95,7 @@ public class Segmento implements Serializable {
         this.anchoCarril = anchoCarril;
     }
 
-    public String getAnchoBerma(String string) {
+    public String getAnchoBerma() {
         return anchoBerma;
     }
 

@@ -69,7 +69,7 @@ public class ConsulCarreteraActivity extends AppCompatActivity {
         SQLiteDatabase db = baseDatos.getReadableDatabase();
 
         Carretera carretera = null;
-        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_CARRETERA,null);
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.CARRETERA.TABLA_CARRETERA,null);
 
         while (cursor.moveToNext()){
             carretera = new Carretera();

@@ -7,18 +7,25 @@
     tools:context="com.alejo_zr.exceldb.Segmento.Flexible.SegmentoFlexActivity">
 
     <ImageButton
-        android:id="@+id/btnEditarSegmento"
+        android:id="@+id/btnEditarSegmentoFlex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/edit"
         android:layout_alignParentRight="true"
         android:onClick="onClick"/>
+    <TextView
+        android:id="@+id/tv_nombre_carretera_segmento_flex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:textSize="@dimen/subTitulo"
+        />
 
     <LinearLayout
         android:id="@+id/llTipoPav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnEditarSegmento"
+        android:layout_below="@+id/btnEditarSegmentoFlex"
         android:orientation="horizontal">
 
         <TextView
@@ -29,7 +36,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tvPav"
+            android:id="@+id/tvPavFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/vacio"
@@ -54,7 +61,7 @@
             android:text="@string/nCalzadas"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tvnCalzadas"
+            android:id="@+id/tvnCalzadasFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.2"
@@ -69,7 +76,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tvnCarriles"
+            android:id="@+id/tvnCarrilesFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1.2"
@@ -115,7 +122,7 @@
             android:text="@string/anchoBerma"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tvanchoBerma"
+            android:id="@+id/tvanchoBermaFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -139,7 +146,7 @@
             android:text="@string/pri"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tvPRI"
+            android:id="@+id/tvPRIFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -153,7 +160,7 @@
             android:text="@string/prf"
             android:textStyle="bold"/>
         <TextView
-            android:id="@+id/tvPRF"
+            android:id="@+id/tvPRFFlex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -173,7 +180,7 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_below="@id/llPr"/>
     <TextView
-        android:id="@+id/tvComentarios"
+        android:id="@+id/tvComentariosFlex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvComen"
@@ -186,7 +193,7 @@
         android:text="@string/regisPatologias"
         android:layout_marginTop="43dp"
         android:onClick="onClick"
-        android:layout_below="@+id/tvComentarios"
+        android:layout_below="@+id/tvComentariosFlex"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -199,17 +206,12 @@
         android:layout_marginTop="@dimen/marginTopBtn"
         android:onClick="onClick"/>
 
-    <TextView
-        android:id="@+id/tv_nombre_carretera_segmento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnConsultarPatologia"
-        android:hint="@string/nombre"/>
+
     <TextView
         android:id="@+id/tv_id_segmento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_nombre_carretera_segmento"
+        android:layout_below="@+id/tv_nombre_carretera_segmento_flex"
         android:hint="@string/segmento"/>
 
 

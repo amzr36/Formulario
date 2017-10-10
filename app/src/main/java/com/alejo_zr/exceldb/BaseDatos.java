@@ -28,38 +28,38 @@ public class BaseDatos extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Utilidades.CREAR_TABLA_CARRETERA);
-        db.execSQL(Utilidades.CREAR_TABLA_SEGMENTO);
-        db.execSQL(Utilidades.CREAR_TABLA_PATOLOGIA);
+        db.execSQL(Utilidades.CARRETERA.CREAR_TABLA_CARRETERA);
+        db.execSQL(Utilidades.SEGMENTOFLEX.CREAR_TABLA_SEGMENTO);
+        db.execSQL(Utilidades.PATOLOGIAFLEX.CREAR_TABLA_PATOLOGIA);
         db.execSQL(Utilidades.CREAR_TABLA_FOTO);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + Utilidades.TABLA_CARRETERA);
-        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_SEGMENTO);
-        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_PATOLOGIA);
+        db.execSQL("DROP TABLE IF EXISTS " + Utilidades.CARRETERA.TABLA_CARRETERA);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.SEGMENTOFLEX.TABLA_SEGMENTO);
+        db.execSQL("DROP TABLE IF EXISTS "+Utilidades.PATOLOGIAFLEX.TABLA_PATOLOGIA);
         db.execSQL("DROP TABLE IF EXISTS "+Utilidades.TABLA_FOTO);
         onCreate(db);
     }
 
     public Cursor getroad() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from " + Utilidades.TABLA_CARRETERA + " ",
+        Cursor res = db.rawQuery("select * from " + Utilidades.CARRETERA.TABLA_CARRETERA + " ",
                 null);
         return res;
     }
 
     public Cursor getSegmento() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from " + Utilidades.TABLA_SEGMENTO + " ",
+        Cursor res = db.rawQuery("select * from " + Utilidades.SEGMENTOFLEX.TABLA_SEGMENTO + " ",
                 null);
         return res;
     }
 
     public Cursor getPato() {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from " + Utilidades.TABLA_PATOLOGIA + " ",
+        Cursor res = db.rawQuery("select * from " + Utilidades.PATOLOGIAFLEX.TABLA_PATOLOGIA + " ",
                 null);
         return res;
     }

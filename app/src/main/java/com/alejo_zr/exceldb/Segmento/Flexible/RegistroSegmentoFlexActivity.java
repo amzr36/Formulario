@@ -104,10 +104,10 @@ public class RegistroSegmentoFlexActivity extends AppCompatActivity {
 
         SQLiteDatabase db=bd.getWritableDatabase();
 
-        String insert="INSERT INTO "+ Utilidades.TABLA_SEGMENTO
-                +" ( "+Utilidades.CAMPO_NOMBRE_CARRETERA_SEGMENTO+","+Utilidades.CAMPO_TIPO_PAV_SEGMENTO+","+Utilidades.CAMPO_CALZADAS_SEGMENTO+","
-                +Utilidades.CAMPO_CARRILES_SEGMENTO+","+Utilidades.CAMPO_ANCHO_CARRIL+","+Utilidades.CAMPO_ANCHO_BERMA+","+Utilidades.CAMPO_PRI_SEGMENTO+","
-                +Utilidades.CAMPO_PRF_SEGMENTO+","+Utilidades.CAMPO_COMENTARIOS+")" +
+        String insert="INSERT INTO "+ Utilidades.SEGMENTOFLEX.TABLA_SEGMENTO
+                +" ( "+Utilidades.SEGMENTOFLEX.CAMPO_NOMBRE_CARRETERA_SEGMENTO+","+Utilidades.SEGMENTOFLEX.CAMPO_CALZADAS_SEGMENTO+","
+                +Utilidades.SEGMENTOFLEX.CAMPO_CARRILES_SEGMENTO+","+Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_CARRIL+","+Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_BERMA+","+Utilidades.SEGMENTOFLEX.CAMPO_PRI_SEGMENTO+","
+                +Utilidades.SEGMENTOFLEX.CAMPO_PRF_SEGMENTO+","+Utilidades.SEGMENTOFLEX.CAMPO_COMENTARIOS+")" +
                 " VALUES ('"+tvNombre_Carretera_Segmento.getText().toString()+"' , '"+campotipoPav.getText().toString()+"' , '"
                 +campoNCalzadas.getText().toString()+"' , '"+campoNCarriles.getText().toString()+"' , '"+campoAnchoCarril.getText().toString()+"' , '"
                 +campoAnchoBerma.getText().toString()+"' , '"+campoPRI.getText().toString()+"' , '"+campoPRF.getText().toString()+"' , '"

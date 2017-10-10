@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.alejo_zr.exceldb.Patologia.Flexible.ConsultaPatologiaFlexActivity;
 import com.alejo_zr.exceldb.Patologia.Flexible.RegistroPatologiaFlexActivity;
 import com.alejo_zr.exceldb.R;
-import com.alejo_zr.exceldb.entidades.Segmento;
+import com.alejo_zr.exceldb.entidades.SegmentoFlex;
 
 public class SegmentoFlexActivity extends AppCompatActivity {
 
@@ -33,11 +33,11 @@ public class SegmentoFlexActivity extends AppCompatActivity {
 
 
         Bundle segmentoEnviado=getIntent().getExtras();
-        Segmento segmento=null;
+        SegmentoFlex segmento=null;
 
 
         if(segmentoEnviado!=null){
-            segmento = (Segmento) segmentoEnviado.getSerializable("segmento");
+            segmento = (SegmentoFlex) segmentoEnviado.getSerializable("segmento");
             tv_id_segmento.setText(segmento.getId_segmento().toString());
             tv_nombre_carretera_segmento.setText(segmento.getNombre_carretera().toString());
             tvPav.setText(segmento.getTipoPav().toString());

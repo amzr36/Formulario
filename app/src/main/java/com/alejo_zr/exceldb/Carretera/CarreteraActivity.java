@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.alejo_zr.exceldb.R;
 import com.alejo_zr.exceldb.Segmento.Flexible.ConsultarSegmentoFlexActivity;
+import com.alejo_zr.exceldb.Segmento.Rigido.ConsultarSegmentoRigiActivity;
 import com.alejo_zr.exceldb.entidades.Carretera;
 
 public class CarreteraActivity extends AppCompatActivity {
@@ -62,9 +62,10 @@ public class CarreteraActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.btnSegmentoRigido:
-                Toast.makeText(getApplicationContext(),"ABRE CONSUKTAR RIGIDO",Toast.LENGTH_SHORT).show();
-                //intent = new Intent(CarreteraActivity.this,ConsultarSegmentoActivity.class);
-                //startActivity(intent);
+                intent = new Intent(CarreteraActivity.this, ConsultarSegmentoRigiActivity.class);
+                intent.putExtra("id_carretera",tvIdCarretera.getText().toString());
+                intent.putExtra("nom_carretera",tvNombreCarretera.getText().toString());
+                startActivity(intent);
                 break;
 
             case R.id.btnEditarCarretera:

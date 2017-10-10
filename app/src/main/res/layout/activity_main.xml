@@ -37,6 +37,13 @@
             android:text="@string/exportar"
             android:onClick="onClick"/>
 
+        <Button
+            android:id="@+id/btnManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ABRIR EL MANUAL"
+            android:onClick="onClick"/>
+
     </LinearLayout>
 
 </ScrollView>

@@ -73,7 +73,7 @@ public class EditarCarreteraActivity extends AppCompatActivity {
         SQLiteDatabase db=baseDatos.getWritableDatabase();
         String[] parametros={campoIdEditar.getText().toString()};
 
-        db.delete(Utilidades.TABLA_CARRETERA,Utilidades.CAMPO_ID_CARRETERA+"=?",parametros);
+        db.delete(Utilidades.CARRETERA.TABLA_CARRETERA,Utilidades.CARRETERA.CAMPO_ID_CARRETERA+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Ya se Eliminó la carretera",Toast.LENGTH_LONG).show();
         campoIdEditar.setText("");
         Intent intent = new Intent(EditarCarreteraActivity.this,ConsultarCarreteraActivity.class);
@@ -88,13 +88,13 @@ public class EditarCarreteraActivity extends AppCompatActivity {
         String[] parametros={campoIdEditar.getText().toString()};
 
         ContentValues values = new ContentValues();
-        values.put(Utilidades.CAMPO_NOMBRE_CARRETERA,campoNombreEditar.getText().toString());
-        values.put(Utilidades.CAMPO_CODIGO_CARRETERA,campoCodigoEditar.getText().toString());
-        values.put(Utilidades.CAMPO_TERRITO_CARRETERA,campoTerritoEditar.getText().toString());
-        values.put(Utilidades.CAMPO_ADMON_CARRETERA,campoAdmonEditar.getText().toString());
-        values.put(Utilidades.CAMPO_LEVANTADO_CARRETERA,campoLevantadoEditar.getText().toString());
+        values.put(Utilidades.CARRETERA.CAMPO_NOMBRE_CARRETERA,campoNombreEditar.getText().toString());
+        values.put(Utilidades.CARRETERA.CAMPO_CODIGO_CARRETERA,campoCodigoEditar.getText().toString());
+        values.put(Utilidades.CARRETERA.CAMPO_TERRITO_CARRETERA,campoTerritoEditar.getText().toString());
+        values.put(Utilidades.CARRETERA.CAMPO_ADMON_CARRETERA,campoAdmonEditar.getText().toString());
+        values.put(Utilidades.CARRETERA.CAMPO_LEVANTADO_CARRETERA,campoLevantadoEditar.getText().toString());
 
-        db.update(Utilidades.TABLA_CARRETERA,values,Utilidades.CAMPO_ID_CARRETERA+"=?",parametros);
+        db.update(Utilidades.CARRETERA.TABLA_CARRETERA,values,Utilidades.CARRETERA.CAMPO_ID_CARRETERA+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Se editó la carretera"+campoNombreEditar.getText().toString(),Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(EditarCarreteraActivity.this,ConsultarCarreteraActivity.class);
         startActivity(intent);

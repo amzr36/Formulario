@@ -1,0 +1,108 @@
+package com.alejo_zr.exceldb.entidades;
+
+/**
+ * Created by Alejo on 09/10/2017.
+ */
+
+public class SegmentoRigi {
+
+    private Integer id_segmento;
+    private String nombre_carretera;
+    private String nCalzadas;
+    private String nCarriles;
+    private String anchoBerma;
+    private String espesorLosa;
+    private String pri;
+    private String prf;
+    private String comentarios;
+
+    public SegmentoRigi(Integer id_segmento, String nombre_carretera, String nCalzadas, String nCarriles, String anchoBerma,
+                        String espesorLosa, String pri, String prf, String comentarios) {
+        this.id_segmento = id_segmento;
+        this.nombre_carretera = nombre_carretera;
+        this.nCalzadas = nCalzadas;
+        this.nCarriles = nCarriles;
+        this.anchoBerma = anchoBerma;
+        this.espesorLosa = espesorLosa;
+        this.pri = pri;
+        this.prf = prf;
+        this.comentarios = comentarios;
+    }
+
+
+    public SegmentoRigi() {
+
+    }
+
+    public Integer getId_segmento() {
+        return id_segmento;
+    }
+
+    public void setId_segmento(Integer id_segmento) {
+        this.id_segmento = id_segmento;
+    }
+
+    public String getNombre_carretera() {
+        return nombre_carretera;
+    }
+
+    public void setNombre_carretera(String nombre_carretera) {
+        this.nombre_carretera = nombre_carretera;
+    }
+
+    public String getnCalzadas() {
+        return nCalzadas;
+    }
+
+    public void setnCalzadas(String nCalzadas) {
+        this.nCalzadas = nCalzadas;
+    }
+
+    public String getnCarriles() {
+        return nCarriles;
+    }
+
+    public void setnCarriles(String nCarriles) {
+        this.nCarriles = nCarriles;
+    }
+
+    public String getAnchoBerma() {
+        return anchoBerma;
+    }
+
+    public void setAnchoBerma(String anchoBerma) {
+        this.anchoBerma = anchoBerma;
+    }
+
+    public String getEspesorLosa() {
+        return espesorLosa;
+    }
+
+    public void setEspesorLosa(String espesorLosa) {
+        this.espesorLosa = espesorLosa;
+    }
+
+    public String getPri() {
+        return pri;
+    }
+
+    public void setPri(String pri) {
+        this.pri = pri;
+    }
+
+    public String getPrf() {
+        return prf;
+    }
+
+    public void setPrf(String prf) {
+        this.prf = prf;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(String comentarios) {
+        this.comentarios = comentarios;
+    }
+}

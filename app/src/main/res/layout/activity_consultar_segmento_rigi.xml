@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.alejo_zr.exceldb.Segmento.Flexible.ConsultarSegmentoFlexActivity">
+    tools:context="com.alejo_zr.exceldb.Segmento.Rigido.ConsultarSegmentoRigiActivity">
 
     <TextView
-        android:id="@+id/tvnomCarretera_consultar_segmentoFlex"
+        android:id="@+id/tvnomCarretera_consultar_segmentoRigi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre"
@@ -16,14 +16,14 @@
 
 
     <ListView
-        android:id="@+id/listViewSegmentoFlex"
+        android:id="@+id/listViewSegmentoRigi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvnomCarretera_consultar_segmentoFlex"
+        android:layout_below="@+id/tvnomCarretera_consultar_segmentoRigi"
         />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/floabtnAddSegFlex"
+        android:id="@+id/floabtnAddSegRigi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/activity_horizontal_margin"
@@ -32,5 +32,6 @@
         android:src="@drawable/add"
         android:onClick="onClick"
         />
+
 
 </RelativeLayout>

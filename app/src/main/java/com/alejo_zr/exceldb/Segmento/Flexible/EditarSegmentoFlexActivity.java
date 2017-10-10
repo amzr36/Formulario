@@ -86,7 +86,7 @@ public class EditarSegmentoFlexActivity extends AppCompatActivity {
     private void eliminarSegmento() {
         SQLiteDatabase db=baseDatos.getWritableDatabase();
         String[] parametros={tv_id_segmento_editar.getText().toString()};
-        db.delete(Utilidades.TABLA_SEGMENTO,Utilidades.CAMPO_ID_SEGMENTO+"=?",parametros);
+        db.delete(Utilidades.SEGMENTOFLEX.TABLA_SEGMENTO,Utilidades.SEGMENTOFLEX.CAMPO_ID_SEGMENTO+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Ya se Eliminó la carretera",Toast.LENGTH_LONG).show();
         tv_id_segmento_editar.setText("");
         Intent intent = new Intent(EditarSegmentoFlexActivity.this,ConsultarSegmentoFlexActivity.class);
@@ -101,16 +101,16 @@ public class EditarSegmentoFlexActivity extends AppCompatActivity {
 
         ContentValues values = new ContentValues();
 
-        values.put(Utilidades.CAMPO_CALZADAS_SEGMENTO , campoNCalzadas_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_CARRILES_SEGMENTO  , campoNCarriles_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_ANCHO_CARRIL , campoAnchoCarril_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_ANCHO_BERMA  , campoAnchoBerma_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_PRI_SEGMENTO, campoPRI_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_PRF_SEGMENTO, campoPRF_Editar.getText().toString());
-        values.put(Utilidades.CAMPO_COMENTARIOS  , campoComentarios_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_CALZADAS_SEGMENTO , campoNCalzadas_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_CARRILES_SEGMENTO  , campoNCarriles_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_CARRIL , campoAnchoCarril_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_BERMA  , campoAnchoBerma_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_PRI_SEGMENTO, campoPRI_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_PRF_SEGMENTO, campoPRF_Editar.getText().toString());
+        values.put(Utilidades.SEGMENTOFLEX.CAMPO_COMENTARIOS  , campoComentarios_Editar.getText().toString());
 
 
-        db.update(Utilidades.TABLA_SEGMENTO,values,Utilidades.CAMPO_ID_SEGMENTO+"=?",parametros);
+        db.update(Utilidades.SEGMENTOFLEX.TABLA_SEGMENTO,values,Utilidades.SEGMENTOFLEX.CAMPO_ID_SEGMENTO+"=?",parametros);
         Toast.makeText(getApplicationContext(),"Se edito el segmento",Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(EditarSegmentoFlexActivity.this,ConsultarSegmentoFlexActivity.class);
         intent.putExtra("tv_id_segmento",tv_id_segmento_editar.getText().toString());

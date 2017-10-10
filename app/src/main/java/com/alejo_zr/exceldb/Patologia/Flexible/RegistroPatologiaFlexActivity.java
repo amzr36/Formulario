@@ -220,10 +220,11 @@ public class RegistroPatologiaFlexActivity extends AppCompatActivity {
         SQLiteDatabase db=bd.getWritableDatabase();
 
 
-        String insert="INSERT INTO "+ Utilidades.TABLA_PATOLOGIA
-                +" ( " +Utilidades.CAMPO_NOMBRE_CARRETERA_PATOLOGIA+","+Utilidades.CAMPO_ID_SEGMENTO_PATOLOGIA+","+Utilidades.CAMPO_CARRIL_PATOLOGIA+","+Utilidades.CAMPO_DANIO_PATOLOGIA+
-                ","+Utilidades.CAMPO_LARGO_PATOLOGIA+","+Utilidades.CAMPO_ANCHO_PATOLOGIA+ ","+Utilidades.CAMPO_LARGO_REPARACION+","+Utilidades.CAMPO_ANCHO_REPARACION+","
-                +Utilidades.CAMPO_ACLARACIONES+","+Utilidades.CAMPO_FOTO_DANIO+")" +
+        String insert="INSERT INTO "+ Utilidades.PATOLOGIAFLEX.TABLA_PATOLOGIA
+                +" ( " +Utilidades.PATOLOGIAFLEX.CAMPO_NOMBRE_CARRETERA_PATOLOGIA+","+Utilidades.PATOLOGIAFLEX.CAMPO_ID_SEGMENTO_PATOLOGIA+","
+                +Utilidades.PATOLOGIAFLEX.CAMPO_CARRIL_PATOLOGIA+","+Utilidades.PATOLOGIAFLEX.CAMPO_DANIO_PATOLOGIA+","+Utilidades.PATOLOGIAFLEX.CAMPO_LARGO_PATOLOGIA+","
+                +Utilidades.PATOLOGIAFLEX.CAMPO_ANCHO_PATOLOGIA+ ","+Utilidades.PATOLOGIAFLEX.CAMPO_LARGO_REPARACION+","+Utilidades.PATOLOGIAFLEX.CAMPO_ANCHO_REPARACION+","
+                +Utilidades.PATOLOGIAFLEX.CAMPO_ACLARACIONES+","+Utilidades.PATOLOGIAFLEX.CAMPO_FOTO_DANIO+")" +
                 " VALUES ('"+tv_nombre_carretera_patologia.getText().toString()+"' , '"+tv_id_segmento_patologia.getText().toString()+"' , '"+campoCarrilPato.getText().toString()+
                 "' , '"+campoDanioPato.getText().toString()+"' , '"+campoLargoDanio.getText().toString()+"' , '"+campoAnchoDanio.getText().toString()+"' , '"+
                 campoLargoRepa.getText().toString()+"' , '"+campoAnchoRepa.getText().toString()+"' , '"+campoAclaracion.getText().toString()+"' , '"+

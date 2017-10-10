@@ -97,7 +97,7 @@ public class ConsultarCarreteraActivity extends AppCompatActivity {
         Carretera carretera=null;
         listaCarreteras= new ArrayList<Carretera>();
         //select * from carretera
-        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_CARRETERA,null);
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.CARRETERA.TABLA_CARRETERA,null);
 
         while (cursor.moveToNext()){
             carretera=new Carretera();

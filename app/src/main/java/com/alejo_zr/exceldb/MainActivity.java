@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnExportar:
                 exportar();
                 break;
+            case R.id.btnManual:
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.alejo_zr.manual");
+                startActivity(launchIntent);
+                break;
+
         }
         if(intent != null){
             startActivity(intent);
@@ -112,12 +117,12 @@ public class MainActivity extends AppCompatActivity {
                     int i = cursor.getPosition();
                     int il =i+1;
                     //Campos Carreteras
-                    String id = cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_ID_CARRETERA));
-                    String nombre = cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_NOMBRE_CARRETERA));
-                    String codCarretera = cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_CODIGO_CARRETERA));
-                    String territorial = cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_TERRITO_CARRETERA));
-                    String admon= cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_ADMON_CARRETERA));
-                    String levantado = cursor.getString(cursor.getColumnIndex(Utilidades.CAMPO_LEVANTADO_CARRETERA));
+                    String id = cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_ID_CARRETERA));
+                    String nombre = cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_NOMBRE_CARRETERA));
+                    String codCarretera = cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_CODIGO_CARRETERA));
+                    String territorial = cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_TERRITO_CARRETERA));
+                    String admon= cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_ADMON_CARRETERA));
+                    String levantado = cursor.getString(cursor.getColumnIndex(Utilidades.CARRETERA.CAMPO_LEVANTADO_CARRETERA));
 
 
                     //Se Llenan las casillas Carreteras
@@ -145,16 +150,16 @@ public class MainActivity extends AppCompatActivity {
                     //Toast.makeText(getApplicationContext(),"Va a crear campos segmentos ",Toast.LENGTH_SHORT).show();
 
                     //Campos Segmentos
-                    String id_seg = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_ID_SEGMENTO));
-                    String id_seg_car = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_NOMBRE_CARRETERA_SEGMENTO));
-                    String tipoPav = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_TIPO_PAV_SEGMENTO));
-                    String nCalzadas = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_CALZADAS_SEGMENTO));
-                    String nCarriles = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_CARRILES_SEGMENTO));
-                    String anchoCarril = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_ANCHO_CARRIL));
-                    String anchoBerma = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_ANCHO_BERMA));
-                    String pri = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_PRI_SEGMENTO));
-                    String prf = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_PRF_SEGMENTO));
-                    String comentarios = cursor1.getString(cursor1.getColumnIndex(Utilidades.CAMPO_COMENTARIOS));
+                    String id_seg = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_ID_SEGMENTO));
+                    String id_seg_car = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_NOMBRE_CARRETERA_SEGMENTO));
+                    String tipoPav = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_TIPO_PAV_SEGMENTO));
+                    String nCalzadas = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_CALZADAS_SEGMENTO));
+                    String nCarriles = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_CARRILES_SEGMENTO));
+                    String anchoCarril = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_CARRIL));
+                    String anchoBerma = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_ANCHO_BERMA));
+                    String pri = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_PRI_SEGMENTO));
+                    String prf = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_PRF_SEGMENTO));
+                    String comentarios = cursor1.getString(cursor1.getColumnIndex(Utilidades.SEGMENTOFLEX.CAMPO_COMENTARIOS));
 
 
                     //Toast.makeText(getApplicationContext(),"Va a llenar campos segmentos",Toast.LENGTH_SHORT).show();

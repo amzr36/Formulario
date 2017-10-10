@@ -75,7 +75,7 @@ public class ConsultaPatologiaFlexActivity extends AppCompatActivity {
         PatoFlex patoFlex=null;
         listaPatologiasFlex= new ArrayList<PatoFlex>();
         //select * from carretera
-        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.TABLA_PATOLOGIA,null);
+        Cursor cursor=db.rawQuery("SELECT * FROM "+ Utilidades.PATOLOGIAFLEX.TABLA_PATOLOGIA,null);
 
         while(cursor.moveToNext()){
             patoFlex = new PatoFlex();

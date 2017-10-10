@@ -22,7 +22,7 @@
     <string name="eliminar">ELIMINAR</string>
     <string name="title_activity_consultar_carretera">ConsultarCarreteraActivity</string>
     <string name="datosCarretera">Datos Carretera</string>
-    <string name="segmento">Segmentos</string>
+    <string name="segmento">Segmento</string>
     <string name="adminstracion">Administracion</string>
     <string name="vacio">Vacio</string>
     <string name="pavFlex">Pavimento Flexible</string>
@@ -31,6 +31,7 @@
     <string name="nCarriles">Carriles por calzada</string>
     <string name="anchoCarril">Carril </string>
     <string name="anchoBerma">Berma </string>
+    <string name="espesorLosa">Espesor losa (mm)</string>
     <string name="pri">PRI</string>
     <string name="prf">PRF</string>
     <string name="comentarios">Comentarios</string>
