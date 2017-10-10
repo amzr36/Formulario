@@ -1,10 +1,12 @@
 package com.alejo_zr.exceldb.entidades;
 
+import java.io.Serializable;
+
 /**
  * Created by Alejo on 09/10/2017.
  */
 
-public class SegmentoRigi {
+public class SegmentoRigi implements Serializable {
 
     private Integer id_segmento;
     private String nombre_carretera;

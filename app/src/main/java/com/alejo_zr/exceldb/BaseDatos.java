@@ -30,6 +30,7 @@ public class BaseDatos extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(Utilidades.CARRETERA.CREAR_TABLA_CARRETERA);
         db.execSQL(Utilidades.SEGMENTOFLEX.CREAR_TABLA_SEGMENTO);
+        db.execSQL(Utilidades.SEGMENTORIGI.CREAR_TABLA_SEGMENTO);
         db.execSQL(Utilidades.PATOLOGIAFLEX.CREAR_TABLA_PATOLOGIA);
         db.execSQL(Utilidades.CREAR_TABLA_FOTO);
     }
